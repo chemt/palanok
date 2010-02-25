@@ -72,7 +72,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
 
-    'django.contrib.csrf.middleware.CsrfMiddleware',
+    #'django.contrib.csrf.middleware.CsrfMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.multilingual.MultilingualURLMiddleware',
@@ -180,8 +180,9 @@ CMS_PLACEHOLDER_CONF = {
     },
 }
 
-
-CMS_NAVIGATION_EXTENDERS = ()
+CMS_NAVIGATION_EXTENDERS = (
+    ('cmsplugin_photologue.menu.get_nodes', gettext('Photologue navigation')),
+)
 
 CMS_SOFTROOT = True
 CMS_MODERATOR = False
