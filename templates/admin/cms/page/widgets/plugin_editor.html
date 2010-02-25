@@ -1,0 +1,18 @@
+{% load i18n %}
+<div class="plugin-list-holder">
+	<ul class="plugin-list">
+		{% include "admin/cms/page/widgets/plugin_item.html" %}
+	</ul>
+	{% include "admin/cms/page/widgets/installed_plugins_inc.html" %}
+</div>
+<div class="plugin-editor">
+	{% if add %}
+		<p>{% blocktrans %}You must save the page first to add plugins.{% endblocktrans %}</p>
+	{% else %}
+		{% if plugin_list %}
+			<p>{% blocktrans %}No Plugin selected. Selected one on the left side{% endblocktrans %}</p>
+		{% else %}
+			<p>{% blocktrans %}No Plugins present. Add a plugin to this placeholder-slot.{% endblocktrans %}</p>
+		{% endif %}
+	{% endif %}
+</div>
