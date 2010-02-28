@@ -1,0 +1,53 @@
+#footer{
+	width: 980px;
+	overflow : hidden;
+	background : url(media/img/papirus_btm.jpg) no-repeat bottom;
+	height : 228px;
+	position : relative;
+	color: #75644B;
+}
+#footer #footer-menu{
+	position: absolute;
+	left : 200px;
+	top : 10px;
+	word-spacing : 6px;
+	width : 570px;
+	overflow : hidden;
+	white-space : nowrap;
+}
+#footer #footer-menu a{
+	color: #75644B;
+	word-spacing : normal;
+}
+#footer #copyright{
+	font-size: 11px;
+	position : absolute;
+	left : 200px;
+	top : 30px;
+	width : 570px;
+	overflow : hidden;
+	white-space : nowrap;
+}
+#oxylus{
+	width: 99px;
+	height : 15px;
+	overflow : hidden;
+	text-indent : -9999px;
+/*	background : url(media/img/sona.jpg) no-repeat 0 0;*/
+	position : absolute;
+	top: 19px;
+	right : 105px;
+}
+#oxylus:hover{
+	background-position : 0 -15px;
+}
+#footer-logo{
+	width: 104px;
+	height : 40px;
+	overflow : hidden;
+	text-indent : -9999px;
+	background : url(media/img/logo.jpg) no-repeat;
+	position : absolute;
+	left : 85px;
+	top : 6px;
+}

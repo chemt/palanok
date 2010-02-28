@@ -1,0 +1,52 @@
+div.spacer2,
+div.spacer3,
+div.spacer4,
+div.spacer5,
+div.spacer10,
+div.spacer15{
+	clear : both;
+	display : block;
+	font-size : 0;
+	height : 5px;
+	line-height : 0;
+	visibility : hidden;
+	overflow : hidden;
+}
+
+div.spacer10{
+	height : 10px;
+}
+
+div.spacer15{
+	height : 15px;
+}
+
+div.spacer2{
+	height : 2px;
+}
+
+div.spacer3{
+	height : 3px;
+}
+
+div.spacer4{
+	height : 4px;
+}
+
+/* CLEARING FLOATS */
+div.clear,
+img.clear,
+span.clear,
+ul li.clear{
+	clear : both;
+	display : block!important;
+	float : none!important;
+	font-size : 0!important;
+	height : 0!important;
+	line-height : 0!important;
+	margin : 0!important;
+	padding : 0!important;
+	visibility : hidden;
+	overflow : hidden;
+}
+
