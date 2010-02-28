@@ -1,6 +1,7 @@
 # Django settings for cms project.
 import os
 PROJECT_DIR = os.path.dirname(__file__)
+PROJECT_NAME = 'palanok'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -138,6 +139,7 @@ LANGUAGES = (
     ('hu', gettext('Hungarian')),
 )
 
+CMS_LANGUAGE_FALLBACK = True
 CMS_LANGUAGE_CONF = {
     'de':['en'],
     'ru':['uk', 'en'],
@@ -153,8 +155,7 @@ CMS_TEMPLATES = (
 )
 
 CMS_APPLICATIONS_URLS = (
-    ('sampleapp.urls', 'Sample application'),
-    ('sampleapp.urlstwo', 'Second sample application'),
+    ('cmsplugin_photologue.urls', 'Photologue app'),
 )
 
 CMS_PLACEHOLDER_CONF = {                        
