@@ -15,6 +15,12 @@
 	overflow : hidden;
 	white-space : nowrap;
 }
+
+#footer #footer-menu ul li{
+	float: left;
+	padding-right: 2em;
+}
+
 #footer #footer-menu a{
 	color: #75644B;
 	word-spacing : normal;

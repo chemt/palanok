@@ -8,6 +8,18 @@
 	overflow : hidden;
 	background : url(/media/img/papirus_top.jpg) no-repeat 0 0;
 }
+
+#breadcrumb
+{
+	padding-left: 50px;
+	padding-top: 1em;
+}
+
+#breadcrumb h1
+{
+	font-size: 1.5em;
+}
+
 #content #main-content{
 	width: 810px;
 	min-height : 285px;

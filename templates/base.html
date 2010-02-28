@@ -22,9 +22,14 @@
 		{% language_chooser %}
 	</div>
 	
-	<div id="menu" class="ro">
+	<div id="menu">
 	  <ul>
 		{% show_menu 0 0 0 0 %}
+	  </ul>
+	</div>
+	<div id="submenu">
+	  <ul>
+		{% show_menu 1 1 0 100 %}
 	  </ul>
 	</div>
 
@@ -57,14 +62,13 @@
 	<!-- e:MID CONTENT -->
 	<!-- s:FOOTER -->
 	<div id="footer">
-		<a id="footer-logo" href="ro/index.html" title="*** +++">*** +++</a>
-		
+		<a id="footer-logo" href="/" title="Hotel Palanok Mukachevo">Готель Паланок Мукачево</a>
 		<div id="footer-menu">
-		{% show_menu 0 0 0 0 %}
+			<ul>{% show_menu 0 0 0 0 %}</ul>
 		</div>
 
-		<div id="copyright">Copyright &copy;</div>
-		<a id="sona" href="http://www.sona-studio.org.ua/" title="Sona web-Studio">Sona web-Studio</a>
+		<div id="copyright">Copyright &copy; Готель Паланок. Розробка сайту <a id="sona" href="http://www.sona-studio.org.ua/" title="Sona web-Studio">Sona web-Studio</a></div>
+		
 	</div>
 	<!-- e:FOOTER -->
 </div>
