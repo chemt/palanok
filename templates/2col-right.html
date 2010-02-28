@@ -2,15 +2,14 @@
 {% load cms_tags %}
 
 				{% block content %}
-					<div id="left-col" class="left col"> 
-							{% placeholder side-column %}
-					</div> 
-
-					<div id="body-col" class="body right"> 
+					<div id="body-col" class="body left"> 
 							<h3>Title {% page_attribute title %}</h3>
 							<div class="spacer10"></div>
 							<div class="pageContent">
 								{% placeholder body %}
 							</div>
 					</div>
+					<div id="right-col" class="col right"> 
+							{% placeholder side-column %}
+					</div> 
 				{% endblock %}

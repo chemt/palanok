@@ -9,10 +9,7 @@
 	<link href="{{ MEDIA_URL }}css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<!-- s:Load Preloader Image -->
 
-<!-- e:Load Preloader Image -->
-<!-- s:WRAPPER -->
 <div id="wrapper">
 	<!-- s:HEADER -->
 	<div id="header">
@@ -20,18 +17,14 @@
 		<img src="{{ MEDIA_URL }}img/header.jpg" alt="" />
 		<!-- e:HEADER IMAGE -->
 		<!-- s:LOGO -->
-		<a id="logo" href="ro/index.html" title="*** +++">Готель паланок</a>
+		<a id="logo" href="/" title="*** +++">Готель Паланок</a>
 		<!-- e:LOGO -->
-		<!-- s:LANGUAGES -->
-
 		{% language_chooser %}
-		<!-- e:LANGUAGES -->
 	</div>
 	
 	<div id="menu" class="ro">
 	  <ul>
 		{% show_menu 0 0 0 0 %}
-		<li><a class="crt" href="ro/index.html">Головна</a></li>
 	  </ul>
 	</div>
 
@@ -39,7 +32,6 @@
 		<div id="papirus-top">
 			<div id="breadcrumb">
 				<ul class="breadcrumb">
-				{% page_attribute title %}
 					{#% show_breadcrumb %#}
 				</ul>
 				<h1>{% page_attribute title %}</h1>
@@ -47,18 +39,17 @@
 			</div>
 			<div id="main-content">
 				{% block content %}
-				<div class="2col-right">
-					<div id="body-col">
+					<div id="left-col" class="left col"> 
+							{% placeholder side-column %}
+					</div> 
+
+					<div id="body-col" class="body right"> 
 							<h3>Title {% page_attribute title %}</h3>
 							<div class="spacer10"></div>
-								<div class="pageContent">
+							<div class="pageContent">
 								{% placeholder body %}
-								</div>
+							</div>
 					</div>
-					<div id="side-col">
-							{% placeholder side-column %}
-					</div>
-				</div>
 				{% endblock %}
 			</div>
 		</div>

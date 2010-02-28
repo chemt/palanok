@@ -150,8 +150,8 @@ CMS_LANGUAGE_CONF = {
 APPEND_SLASH = True
 
 CMS_TEMPLATES = (
-    ('base.html', gettext('column right')),
-    ('2col-left.html', gettext('column right')),
+    ('2col-left.html',  gettext('with left column')),
+    ('2col-right.html', gettext('with right column')),
 )
 
 CMS_APPLICATIONS_URLS = (

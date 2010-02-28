@@ -15,26 +15,13 @@
 	margin : 95px 0 25px 85px;
 }
 
-.2col-right #body-col{
-	width : 450px;
-	overflow : hidden;
-	float : left;
-}
-.2col-right #side-col{
-	width : 280px;
-	overflow : hidden;
-	float : right;
-}
+.col{ width: 250px; overflow: hidden;}
+.right{	float: right;}
+.left{	float: left;}
 
-.2col-left #body-col{
-	width : 450px;
+#body-col{
+	width : 520px;
 	overflow : hidden;
-	float : right;
-}
-.2col-right #side-col{
-	width : 280px;
-	overflow : hidden;
-	float : left;
 }
 
 #content p{

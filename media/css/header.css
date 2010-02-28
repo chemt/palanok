@@ -21,28 +21,43 @@
 	top : 44px;
 }
 /* LANG */
+
 a.lang{
 	position : absolute;
-	width: 35px;
-	height : 52px;
 	overflow : hidden;
-	display : block;
-	text-indent : -9999px;
 	top : 6px;
-	background-position: right 0;
-	background-repeat : no-repeat 
+	width: 64px;
+	display: block;
+	padding-top: 64px;
+	margin: 0px; 
+	text-align: center;
+	background-position: top right;
+	background-repeat : no-repeat;
+	color: #FFF;
+	font-size: 1.3em;
+	text-shadow: #000 1px 1px 1px;
 }
 a.lang:hover{
 	border-bottom : 3px solid #222;
 }
-#ro{
-	right : 31px;
-	background-image : url(/media/img/ro.jpg);
+#uk{
+	right: 198px;
+	background-image : url(/media/img/uk.png);
+}
+#ru{
+	right: 134px;
+	background-image : url(/media/img/ru.png);
 }
 #en{
-	right : 67px;
-	background-image : url(/media/img/en.jpg);
+	right: 70px;
+	background-image : url(/media/img/en.png);
 }
+#hu{
+	right: 6px;
+	background-image : url(/media/img/hu.png);
+}
+
+
 /* MENU */
 #menu{
 	height: 42px;
