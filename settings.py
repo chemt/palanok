@@ -73,16 +73,16 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
 
-    'django.contrib.csrf.middleware.CsrfMiddleware',
+    #'django.contrib.csrf.middleware.CsrfMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.multilingual.MultilingualURLMiddleware',
-    'cms.middleware.toolbar.ToolbarMiddleware',
+    #'cms.middleware.toolbar.ToolbarMiddleware',
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
     
 )
 
-ROOT_URLCONF = 'palanok.urls'
+ROOT_URLCONF = PROJECT_NAME + '.urls'
 
 
 TEMPLATE_DIRS = (
@@ -173,17 +173,20 @@ CMS_PLACEHOLDER_CONF = {
 }
 
 
-CMS_NAVIGATION_EXTENDERS = ()
+CMS_NAVIGATION_EXTENDERS = (
+    ('cmsplugin_photologue.menu.get_nodes', gettext('Photologue navigation')),
+)
 
 CMS_SOFTROOT = True
 CMS_MODERATOR = False
 CMS_PERMISSION = False
-CMS_REDIRECTS = True
+CMS_REDIRECTS = False
 CMS_SEO_FIELDS = True
 CMS_FLAT_URLS = False
 CMS_MENU_TITLE_OVERWRITE = True
-CMS_HIDE_UNTRANSLATED = False
-CMS_URL_OVERWRITE = True
+CMS_HIDE_UNTRANSLATED = True
+CMS_URL_OVERWRITE = False
+CMS_TEMPLATE_INHERITANCE = True
 
 
 try:
@@ -191,75 +194,3 @@ try:
 except ImportError:
     pass
 
-"""wt ?
-try:
-    import coverage
-    TEST_RUNNER='cms.tests.test_runner_with_coverage'
-    COVERAGE_MODULES = [
-        'cms',
-        'cms.admin', 
-        'cms.admin.change_list',
-        'cms.admin.forms',
-        'cms.admin.models',
-        'cms.admin.permissionadmin',
-        'cms.admin.useradmin',
-        'cms.admin.utils',
-        'cms.admin.views',
-        'cms.admin.widgets',
-        'cms.admin.dialog',
-        'cms.admin.dialog.forms',
-        'cms.admin.dialog.utils',
-        'cms.admin.dialog.views',
-        'cms.cache',
-        'cms.cache.permissions',
-        'cms.cache.signals',
-        'cms.conf.global_settings',
-        'cms.conf.patch',
-        'cms.management.commands.publisher_publish',
-        'cms.middleware.multilingual',
-        'cms.middleware.page',
-        'cms.middleware.user',
-        'cms.migrations',
-        'cms.models', 
-        'cms.models.managers',
-        'cms.models.moderatormodels',
-        'cms.models.pagemodel',
-        'cms.models.permissionmodels',
-        'cms.models.pluginmodel',
-        'cms.models.query',
-        'cms.models.signals',
-        'cms.models.titlemodels',
-        'cms.sitemaps.cms_sitemap',
-        'cms.templatetags.cms_admin',
-        'cms.templatetags.cms_tags',
-        'cms.templatetags.js',
-        'cms.templatetags.mlurl',
-        'cms.utils',
-        'cms.utils.admin',
-        'cms.utils.helpers',
-        'cms.utils.i18n',
-        'cms.utils.mail',
-        'cms.utils.moderator',
-        'cms.utils.navigation',
-        'cms.utils.page',
-        'cms.utils.permissions',
-        'cms.utils.urlutils',
-        'cms.appresolver',
-        'cms.context_processors',
-        'cms.plugin_base',
-        'cms.plugin_pool',
-        'cms.signals',
-        'cms.urls',
-        'cms.views',
-        'publisher',
-        'publisher.base',
-        'publisher.errors',
-        'publisher.manager',
-        'publisher.models',
-        'publisher.mptt_support',
-        'publisher.options',
-        'publisher.query',
-        ]
-except:
-    pass
-"""
