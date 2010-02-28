@@ -1,12 +1,12 @@
 #content{
 	width: 980px;
 	overflow : hidden;
-	background : url(media/img/papirus_mid.jpg) repeat-y 0 0;
+	background : url(/media/img/papirus_mid.jpg) repeat-y 0 0;
 }
 #content #papirus-top{
 	width: 980px;
 	overflow : hidden;
-	background : url(media/img/papirus_top.jpg) no-repeat 0 0;
+	background : url(/media/img/papirus_top.jpg) no-repeat 0 0;
 }
 #content #main-content{
 	width: 810px;
@@ -51,7 +51,7 @@
 	display: block;
 	margin : 0;
 	border : 3px solid #edb;
-	background :#091702 url(media/img/preloader1.gif) no-repeat center;
+	background :#091702 url(/media/img/preloader1.gif) no-repeat center;
 	min-height : 50px;
 	min-width : 50px;
 }
@@ -67,7 +67,7 @@
 	font-size : 11px;
 }
 #content ul.list li{
-	background: url(media/img/layout/common/arrow.gif) no-repeat 5px 7px;
+	background: url(/media/img/layout/common/arrow.gif) no-repeat 5px 7px;
 	padding : 3px 0 3px 18px;
 }
 
@@ -100,7 +100,7 @@
 #content ul#gallery li img{
 	width : 77px;
 	height : 57px;
-	background :#091702 url(media/img/preloader1.gif) no-repeat center;
+	background :#091702 url(/media/img/preloader1.gif) no-repeat center;
 	border : 3px solid #BBA77C;
 	display : block;
 	padding : 1px;

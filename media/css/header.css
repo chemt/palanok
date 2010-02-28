@@ -1,6 +1,6 @@
 #header{
 	width: 980px;
-	background : url(media/img/preloader1.gif) no-repeat 50% 60%;
+	background : url(/media/img/preloader1.gif) no-repeat 50% 60%;
 	overflow : hidden;
 	position : relative;
 	height : 181px;
@@ -12,7 +12,7 @@
 #header a#logo{
 	width: 282px;
 	height : 107px;
-	background : url(media/img/logo.png) no-repeat;
+	background : url(/media/img/logo.png) no-repeat;
 	display: block;
 	text-indent : -9999px;
 	overflow : hidden;
@@ -37,25 +37,25 @@ a.lang:hover{
 }
 #ro{
 	right : 31px;
-	background-image : url(media/img/ro.jpg);
+	background-image : url(/media/img/ro.jpg);
 }
 #en{
 	right : 67px;
-	background-image : url(media/img/en.jpg);
+	background-image : url(/media/img/en.jpg);
 }
 /* MENU */
 #menu{
 	height: 42px;
 	width : 980px;
 	overflow : hidden;
-	background : url(media/img/menu_dec_left.jpg) no-repeat left;
+	background : url(/media/img/menu_dec_left.jpg) no-repeat left;
 }
 #menu ul{
 	height: 42px;
 	width : 951px;
 	padding-left : 29px;
 	overflow : hidden;
-	background : url(media/img/menu_dec_right.jpg) no-repeat right;
+	background : url(/media/img/menu_dec_right.jpg) no-repeat right;
 }
 #menu ul li{
 	float: left;

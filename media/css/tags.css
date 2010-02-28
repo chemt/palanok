@@ -4,12 +4,12 @@ body, html{
 }
 
 html{
-	background :#0A1903 url(media/img/repeatingbg.jpg) repeat 0 0;
+	background :#0A1903 url(/media/img/repeatingbg.jpg) repeat 0 0;
 }
 
 body{
-	background : url(media/img/top_bg.jpg) repeat-x 0 0;
-	behavior: url(media/css/csshover.htc);
+	background : url(/media/img/top_bg.jpg) repeat-x 0 0;
+	behavior: url(/media/css/csshover.htc);
 	font : 12px arial, sans-serif;
 }
 

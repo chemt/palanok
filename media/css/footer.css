@@ -1,7 +1,7 @@
 #footer{
 	width: 980px;
 	overflow : hidden;
-	background : url(media/img/papirus_btm.jpg) no-repeat bottom;
+	background : url(/media/img/papirus_btm.jpg) no-repeat bottom;
 	height : 228px;
 	position : relative;
 	color: #75644B;
@@ -33,7 +33,7 @@
 	height : 15px;
 	overflow : hidden;
 	text-indent : -9999px;
-/*	background : url(media/img/sona.jpg) no-repeat 0 0;*/
+/*	background : url(/media/img/sona.jpg) no-repeat 0 0;*/
 	position : absolute;
 	top: 19px;
 	right : 105px;
@@ -46,7 +46,7 @@
 	height : 40px;
 	overflow : hidden;
 	text-indent : -9999px;
-	background : url(media/img/logo.jpg) no-repeat;
+	background : url(/media/img/logo.jpg) no-repeat;
 	position : absolute;
 	left : 85px;
 	top : 6px;

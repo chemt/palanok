@@ -1,5 +1,5 @@
 div.contactError{
-	background:#f5f5f5 url(media/img/bg.gif) repeat top;
+	background:#f5f5f5 url(/media/img/bg.gif) repeat top;
 	border : 2px solid #AD9E82;
 	padding : 15px;
 	color : #333;
@@ -11,6 +11,6 @@ font-weight: normal;
 	padding-top : 10px;
 }
 div.contactError li{
-	background : url(media/img/bull.gif) no-repeat 5px 7px;
+	background : url(/media/img/bull.gif) no-repeat 5px 7px;
 	padding : 2px 0 2px 20px;
 }

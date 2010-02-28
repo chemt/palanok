@@ -49,12 +49,12 @@
 	height : 12px;
 	overflow : hidden;
 	border : none;
-	background : url(media/img/btn_trimite_formularul.gif) no-repeat left top;
+	background : url(/media/img/btn_trimite_formularul.gif) no-repeat left top;
 	cursor : pointer;
 	float : left;
 }
 #contact-form #en-btn-send-email{
-	background-image : url(media/img/send_form.gif);
+	background-image : url(/media/img/send_form.gif);
 	width: 69px;
 }
 #mesaj #ro-btn-send,
@@ -63,12 +63,12 @@
 	height : 12px;
 	overflow : hidden;
 	border : none;
-	background : url(media/img/btn_trimite_mesajul.gif) no-repeat left top;
+	background : url(/media/img/btn_trimite_mesajul.gif) no-repeat left top;
 	cursor : pointer;
 	float : left;
 }
 #mesaj #en-btn-send{
-	background-image : url(media/img/send_message.gif);
+	background-image : url(/media/img/send_message.gif);
 	width : 84px;
 }
 #contact-form #ro-btn-send-email:hover,
