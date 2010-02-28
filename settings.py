@@ -148,9 +148,8 @@ CMS_LANGUAGE_CONF = {
 APPEND_SLASH = True
 
 CMS_TEMPLATES = (
-    ('index.html', gettext('default')),
-    ('nice.html', gettext('nice one')),
-    ('cool.html', gettext('cool one')),
+    ('base.html', gettext('column right')),
+    ('2col-left.html', gettext('column right')),
 )
 
 CMS_APPLICATIONS_URLS = (
@@ -159,24 +158,16 @@ CMS_APPLICATIONS_URLS = (
 )
 
 CMS_PLACEHOLDER_CONF = {                        
-    'right-column': {
-        "plugins": ('FilePlugin', 'FlashPlugin', 'LinkPlugin', 'PicturePlugin', 'TextPlugin', 'SnippetPlugin'),
-        "extra_context": {"width":940},
-        "name":gettext("right column")
-    },
-    
     'body': {
-        "extra_context": {"width":280},
+        "extra_context": {"width":450},
         "name":gettext("body"),
     },
-    'fancy-content': {
-        "plugins": ('TextPlugin', 'LinkPlugin'),
-        "extra_context": {"width":"640"},
-        "name":gettext("fancy content custom name"),
-        "limits": {
-            "global": 3,
-            "TextPlugin": 1,
-        },
+
+
+    'side-column ': {
+        "plugins": ('LinkPlugin', 'PicturePlugin', 'FilePlugin', 'FlashPlugin', 'TextPlugin', 'SnippetPlugin'),
+        "extra_context": {"width":250},
+        "name":gettext("column")
     },
 }
 

@@ -1,8 +1,85 @@
-{% extends "index.html" %}
-{% load cms_tags %}
+{% load cache cms_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+	<title>{% block title %}{% page_attribute title %}{% endblock %}</title>
+	<meta name="description" content="{% page_attribute meta_description %}"/>
+	<meta name="keywords" content="{% page_attribute meta_keywords %}"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-{% block title %}Photologue template{% endblock %}
+	<link href="{{ media_url }}main.css" rel="stylesheet" type="text/css" />
+	{% plugins_media %}	
+</head>
+<body>
+<!-- s:Load Preloader Image -->
 
-{% block content %}{{ block.super }}
-    {% placeholder fancy-content %}
-{% endblock %}
+<!-- e:Load Preloader Image -->
+<!-- s:WRAPPER -->
+<div id="wrapper">
+	<!-- s:HEADER -->
+	<div id="header">
+		<!-- s:HEADER IMAGE -->
+		<img src="{{ media_url }}img/header.jpg" alt="" />
+		<!-- e:HEADER IMAGE -->
+		<!-- s:LOGO -->
+		<a id="logo" href="ro/index.html" title="*** +++">*** +++</a>
+		<!-- e:LOGO -->
+		<!-- s:LANGUAGES -->
+
+		{% language_chooser %}
+		<!-- e:LANGUAGES -->
+	</div>
+	
+	<div id="menu" class="ro">
+	  <ul>
+		{% show_menu 0 0 0 0 %}
+		<li><a class="crt" href="ro/index.html">Головна</a></li>
+	  </ul>
+	</div>
+
+	<div id="content">
+		<div id="papirus-top">
+			<div id="breadcrumb">
+				<ul class="breadcrumb">
+				{% page_attribute title %}
+					{#% show_breadcrumb %#}
+				</ul>
+				<h1>{% page_attribute title %}</h1>
+
+			</div>
+			<div id="main-content">
+				{% block content %}
+				<div class="2col-right">
+					<div id="body-col">
+						<h3>Title {% page_attribute title %}</h3>
+						<div class="spacer10"></div>
+							<div class="pageContent">
+							{% placeholder body %}
+							</div>
+					</div>
+					<div id="side-col">
+							{% placeholder side-column %}
+					</div>
+				</div>
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+	<!-- e:MID CONTENT -->
+	<!-- s:FOOTER -->
+	<div id="footer">
+		<a id="footer-logo" href="ro/index.html" title="*** +++">*** +++</a>
+		
+		<div id="footer-menu">
+		{% show_menu 0 0 0 0 %}
+		</div>
+
+		<div id="copyright">Copyright &copy;</div>
+		<a id="sona" href="http://www.sona-studio.org.ua/" title="Sona web-Studio">Sona web-Studio</a>
+	</div>
+	<!-- e:FOOTER -->
+</div>
+<!-- e:WRAPPER -->
+</body>
+</html>

@@ -1,17 +1,17 @@
 {% extends "index.html" %}
-
-{% block title %}404{% endblock %}
+{% load cms_tags %}
 
 {% block content %}
     			<div class="2col-left">
 					<div id="body-col">
-						<h3>Error 404</h3>
+						<h3>{% page_attribute title %}</h3>
 						<div class="spacer10"></div>
 							<div class="pageContent">
-								Page not found
+							{% placeholder body %}
 							</div>
 					</div>
 					<div id="side-col">
+							{% placeholder side-column %}
 					</div>
 				</div>
 {% endblock %}
