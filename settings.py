@@ -1,6 +1,7 @@
 # Django settings for cms project.
 import os
 PROJECT_DIR = os.path.dirname(__file__)
+PROJECT_NAME = 'palanok'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -76,12 +77,12 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.multilingual.MultilingualURLMiddleware',
-    'cms.middleware.toolbar.ToolbarMiddleware',
+    #'cms.middleware.toolbar.ToolbarMiddleware',
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
     
 )
 
-ROOT_URLCONF = 'palanok.urls'
+ROOT_URLCONF = PROJECT_NAME + '.urls'
 
 
 TEMPLATE_DIRS = (
@@ -138,6 +139,7 @@ LANGUAGES = (
     ('hu', gettext('Hungarian')),
 )
 
+CMS_LANGUAGE_FALLBACK = True
 CMS_LANGUAGE_CONF = {
     'de':['en'],
     'ru':['uk', 'en'],
@@ -148,37 +150,28 @@ CMS_LANGUAGE_CONF = {
 APPEND_SLASH = True
 
 CMS_TEMPLATES = (
-    ('index.html', gettext('default')),
-    ('nice.html', gettext('nice one')),
-    ('cool.html', gettext('cool one')),
+    ('base.html', gettext('column right')),
+    ('2col-left.html', gettext('column right')),
 )
 
 CMS_APPLICATIONS_URLS = (
-    ('sampleapp.urls', 'Sample application'),
-    ('sampleapp.urlstwo', 'Second sample application'),
+    ('cmsplugin_photologue.urls', 'Photologue app'),
 )
 
 CMS_PLACEHOLDER_CONF = {                        
-    'right-column': {
-        "plugins": ('FilePlugin', 'FlashPlugin', 'LinkPlugin', 'PicturePlugin', 'TextPlugin', 'SnippetPlugin'),
-        "extra_context": {"width":940},
-        "name":gettext("right column")
-    },
-    
     'body': {
-        "extra_context": {"width":280},
+        "extra_context": {"width":450},
         "name":gettext("body"),
     },
-    'fancy-content': {
-        "plugins": ('TextPlugin', 'LinkPlugin'),
-        "extra_context": {"width":"640"},
-        "name":gettext("fancy content custom name"),
-        "limits": {
-            "global": 3,
-            "TextPlugin": 1,
-        },
+
+
+    'side-column ': {
+        "plugins": ('LinkPlugin', 'PicturePlugin', 'FilePlugin', 'FlashPlugin', 'TextPlugin', 'SnippetPlugin'),
+        "extra_context": {"width":250},
+        "name":gettext("column")
     },
 }
+
 
 CMS_NAVIGATION_EXTENDERS = (
     ('cmsplugin_photologue.menu.get_nodes', gettext('Photologue navigation')),
@@ -187,12 +180,13 @@ CMS_NAVIGATION_EXTENDERS = (
 CMS_SOFTROOT = True
 CMS_MODERATOR = False
 CMS_PERMISSION = False
-CMS_REDIRECTS = True
+CMS_REDIRECTS = False
 CMS_SEO_FIELDS = True
 CMS_FLAT_URLS = False
 CMS_MENU_TITLE_OVERWRITE = True
-CMS_HIDE_UNTRANSLATED = False
-CMS_URL_OVERWRITE = True
+CMS_HIDE_UNTRANSLATED = True
+CMS_URL_OVERWRITE = False
+CMS_TEMPLATE_INHERITANCE = True
 
 
 try:
@@ -200,75 +194,3 @@ try:
 except ImportError:
     pass
 
-"""wt ?
-try:
-    import coverage
-    TEST_RUNNER='cms.tests.test_runner_with_coverage'
-    COVERAGE_MODULES = [
-        'cms',
-        'cms.admin', 
-        'cms.admin.change_list',
-        'cms.admin.forms',
-        'cms.admin.models',
-        'cms.admin.permissionadmin',
-        'cms.admin.useradmin',
-        'cms.admin.utils',
-        'cms.admin.views',
-        'cms.admin.widgets',
-        'cms.admin.dialog',
-        'cms.admin.dialog.forms',
-        'cms.admin.dialog.utils',
-        'cms.admin.dialog.views',
-        'cms.cache',
-        'cms.cache.permissions',
-        'cms.cache.signals',
-        'cms.conf.global_settings',
-        'cms.conf.patch',
-        'cms.management.commands.publisher_publish',
-        'cms.middleware.multilingual',
-        'cms.middleware.page',
-        'cms.middleware.user',
-        'cms.migrations',
-        'cms.models', 
-        'cms.models.managers',
-        'cms.models.moderatormodels',
-        'cms.models.pagemodel',
-        'cms.models.permissionmodels',
-        'cms.models.pluginmodel',
-        'cms.models.query',
-        'cms.models.signals',
-        'cms.models.titlemodels',
-        'cms.sitemaps.cms_sitemap',
-        'cms.templatetags.cms_admin',
-        'cms.templatetags.cms_tags',
-        'cms.templatetags.js',
-        'cms.templatetags.mlurl',
-        'cms.utils',
-        'cms.utils.admin',
-        'cms.utils.helpers',
-        'cms.utils.i18n',
-        'cms.utils.mail',
-        'cms.utils.moderator',
-        'cms.utils.navigation',
-        'cms.utils.page',
-        'cms.utils.permissions',
-        'cms.utils.urlutils',
-        'cms.appresolver',
-        'cms.context_processors',
-        'cms.plugin_base',
-        'cms.plugin_pool',
-        'cms.signals',
-        'cms.urls',
-        'cms.views',
-        'publisher',
-        'publisher.base',
-        'publisher.errors',
-        'publisher.manager',
-        'publisher.models',
-        'publisher.mptt_support',
-        'publisher.options',
-        'publisher.query',
-        ]
-except:
-    pass
-"""
