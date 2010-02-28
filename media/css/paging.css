@@ -1,0 +1,25 @@
+#nav-box{
+	height: 20px;
+	line-height : 20px;
+	border-top : 1px dashed #AD9E82;
+	width : 790px;
+	padding : 0 10px;
+	overflow : hidden;
+	font: 11px tahoma,sans-serif;
+	color : #564C3C;
+	margin-top : 10px;
+	margin-bottom : 10px;
+}
+#nav-box .lft{
+	height: 20px;
+	line-height : 20px;
+	float : left;
+}
+#nav-box .rgt{
+	height: 20px;
+	line-height : 20px;
+	float : right;
+}
+#nav-box .rgt b{
+	padding : 0 2px;
+}

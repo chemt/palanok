@@ -1,0 +1,54 @@
+body, html{
+	margin : 0;
+	padding : 0;
+}
+
+html{
+	background :#0A1903 url(media/img/repeatingbg.jpg) repeat 0 0;
+}
+
+body{
+	background : url(media/img/top_bg.jpg) repeat-x 0 0;
+	behavior: url(media/css/csshover.htc);
+	font : 12px arial, sans-serif;
+}
+
+a{
+	text-decoration : none;
+}
+
+a img{
+	border : none;
+}
+
+a:hover{
+	text-decoration : underline;
+}
+
+ul,ol,dl,li,dd,dt{
+	line-height : normal;
+	list-style : none;
+	margin : 0;
+	padding : 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	display : block;
+	font-size : 14px;
+	font-weight : bold;
+	line-height : normal;
+	margin : 0;
+	padding : 0;
+}
+
+img{
+	border : none;
+	margin : 0;
+	padding : 0;
+}
+
+p{
+	margin : 0 0 10px 0;
+	padding : 0;
+	text-align : justify;
+}
