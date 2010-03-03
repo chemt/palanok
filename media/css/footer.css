@@ -52,7 +52,7 @@
 	height : 40px;
 	overflow : hidden;
 	text-indent : -9999px;
-	background : url(/media/img/logo.jpg) no-repeat;
+	/*background : url(/media/img/logo.png) no-repeat;*/
 	position : absolute;
 	left : 85px;
 	top : 6px;

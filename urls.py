@@ -23,3 +23,8 @@ if settings.DEBUG:
 urlpatterns += patterns('',
     url(r'^', include('cms.urls')),
 )
+
+#import photologue urls
+urlpatterns += patterns('',
+    url(r'^', include('photologue.urls')),
+)
