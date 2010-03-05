@@ -7,6 +7,26 @@
 	<meta name="keywords" content="{% page_attribute meta_keywords %}"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="{{ MEDIA_URL }}css/main.css" rel="stylesheet" type="text/css" />
+	{% block header %}
+		<link type="text/css" href="/media/css/pica.css" rel="stylesheet" />
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/media/js/pikachoose-min.js"></script>
+		<script language="javascript">
+			$(document).ready(
+				function (){
+/*
+									$(".pikachoose ul").PikaChoose({user_thumbs:true, show_prev_next:false});
+				*/
+					$(".pikachoose ul").PikaChoose({delay_caption:false, 
+							auto_play:true,
+							thumb_width: 90,
+							thumb_height: 98,
+						});
+				});
+		</script>
+
+	{% endblock header %}
 </head>
 <body>
 

@@ -1,16 +1,13 @@
 
-    <div class="photo-gallery{% if css %} {{ css }}{% endif %}">
-
-        <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
-
-        {% for photo in gallery.sample|slice:sample_size %}
-
-        <div class="gallery-photo">
-
-            <a href="{{ photo.get_absolute_url }}"><img src="{{ photo.get_thumbnail_url }}" alt="{{ photo.title }}"/></a>
-
-        </div>
-
-        {% endfor %}
-
-    </div>
+<div class="photo-gallery{% if css %} {{ css }}{% endif %}">
+	<div class="pikachoose">
+		<ul>
+        	{% for photo in gallery.sample %}
+            	<li class="gallery-photo">
+                	<img rel="{{ photo.get_display_url }}" src="{{ photo.get_display_url }}" alt="{{ photo.title }}"/>
+                	<span>{{ photo.title }}</span>
+	            </li>
+    	    {% endfor %}
+		</ul>
+	</div>
+</div>
