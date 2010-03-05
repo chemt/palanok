@@ -1,9 +1,13 @@
 #content{
+	margin-top: 204px;
+	margin-left: 23px;
+
 	width: 980px;
 	overflow : hidden;
-	background : url(/media/img/papirus_mid.jpg) repeat-y 0 0;
+	background : url(/media/img/papirus-center.jpg) repeat-y 0 0;
 }
 #content #papirus-top{
+	
 	width: 980px;
 	overflow : hidden;
 	background : url(/media/img/papirus_top.jpg) no-repeat 0 0;

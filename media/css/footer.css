@@ -1,8 +1,9 @@
 #footer{
+	margin-left: 4px;
 	width: 980px;
 	overflow : hidden;
-	background : url(/media/img/papirus_btm.jpg) no-repeat bottom;
-	height : 228px;
+	background : url(/media/img/papirus-bottom.jpg) no-repeat top;
+	height : 322px;
 	position : relative;
 	color: #75644B;
 }
