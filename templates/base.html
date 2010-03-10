@@ -31,15 +31,8 @@
 <body>
 
 <div id="wrapper">
-	<!-- s:HEADER -->
 	<div id="header">
-		<!-- s:HEADER IMAGE -->
-		<img src="{{ MEDIA_URL }}img/header.jpg" alt="" />
-		<!-- e:HEADER IMAGE -->
-		<!-- s:LOGO -->
-		<a id="logo" href="/" title="*** +++">Готель Паланок</a>
-		<!-- e:LOGO -->
-		{% language_chooser %}
+		<a id="logo" href="/" title="Palanok — hotel restaurant in Mukachevo">Palanok Hotel in Mukachevo. &lquote;Паланок&rquote; Готель в Мукачево. hotelpalanok.com</a> 
 	</div>
 	
 	<div id="menu">
@@ -47,30 +40,39 @@
 		{% show_menu 0 0 0 0 %}
 	  </ul>
 	</div>
+
+	<div id="languages">
+		{% language_chooser %}
+	</div>
+	<div style="clear:both;"></div>
+
 	<div id="submenu">
 	  <ul>
 		{% show_menu 1 1 0 100 %}
 	  </ul>
 	</div>
+	
+	<div id="breadcrumb">
+		<ul class="breadcrumb">
+			{#% show_breadcrumb %#}
+		</ul>
+		<h1>{% page_attribute title %}</h1>
+	</div>
 
 	<div id="content">
 		<div id="papirus-top">
-			<div id="breadcrumb">
-				<ul class="breadcrumb">
-					{#% show_breadcrumb %#}
-				</ul>
-				<h1>{% page_attribute title %}</h1>
-
-			</div>
 			<div id="main-content">
 				{% block content %}
+					<div id="top" class="full">
+							{% placeholder top %}
+					</div> 
+
+
 					<div id="left-col" class="left col"> 
 							{% placeholder side-column %}
 					</div> 
 
 					<div id="body-col" class="body right"> 
-							<h3>Title {% page_attribute title %}</h3>
-							<div class="spacer10"></div>
 							<div class="pageContent">
 								{% placeholder body %}
 							</div>
@@ -84,7 +86,7 @@
 	<div id="footer">
 		<a id="footer-logo" href="/" title="Hotel Palanok Mukachevo">Готель Паланок Мукачево</a>
 		<div id="footer-menu">
-			<ul>{% show_menu 0 0 0 0 %}</ul>
+			<ul>{% show_menu 0 100 100 100 %}</ul>
 		</div>
 
 		<div id="copyright">Copyright &copy; Готель Паланок. Розробка сайту <a id="sona" href="http://www.sona-studio.org.ua/" title="Sona web-Studio">Sona web-Studio</a></div>

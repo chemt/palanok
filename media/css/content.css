@@ -1,39 +1,30 @@
 #content{
-	margin-top: 204px;
+	/*
+margin-top: 204px;
+*/
 	margin-left: 23px;
 
-	width: 980px;
+	width: 930px;
 	overflow : hidden;
 	background : url(/media/img/papirus-center.jpg) repeat-y 0 0;
 }
 #content #papirus-top{
-	
-	width: 980px;
+	width: 100%;
 	overflow : hidden;
 	background : url(/media/img/papirus_top.jpg) no-repeat 0 0;
 }
 
-#breadcrumb
-{
-	padding-left: 50px;
-	padding-top: 1em;
-}
-
-#breadcrumb h1
-{
-	font-size: 1.5em;
-}
-
 #content #main-content{
-	width: 810px;
-	min-height : 285px;
 	overflow : hidden;
-	margin : 95px 0 25px 85px;
+	margin : 0 60px;
 }
 
-.col{ width: 250px; overflow: hidden;}
-.right{	float: right;}
-.left{	float: left;}
+.col{width: 250px; overflow: hidden;}
+.right{float: right;}
+.left{float: left;}
+.full{width: 100%;}
+
+#top{}
 
 #body-col{
 	width : 520px;
@@ -49,6 +40,9 @@
 	color : #8A1D1D;
 }
 
+.pageContent h1{
+	font-size: 2em;
+}
 .pageContent img,
 #content .brd-img{
 	display: block;

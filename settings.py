@@ -165,8 +165,12 @@ CMS_PLACEHOLDER_CONF = {
         "name":gettext("body"),
     },
 
-
-    'side-column ': {
+    'top': {
+        "extra_context": {"width":810},
+        "name":gettext("top"),
+    },
+    
+    'side-column': {
         "plugins": ('LinkPlugin', 'PicturePlugin', 'FilePlugin', 'FlashPlugin', 'TextPlugin', 'SnippetPlugin'),
         "extra_context": {"width":250},
         "name":gettext("column")
