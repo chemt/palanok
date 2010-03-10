@@ -1,5 +1,5 @@
 #footer{
-	margin-left: 4px;
+	margin-left: 11px;
 	width: 980px;
 	overflow : hidden;
 	background : url(/media/img/papirus-bottom.jpg) no-repeat top;
@@ -28,9 +28,6 @@
 }
 #footer #copyright{
 	font-size: 11px;
-	position : absolute;
-	left : 200px;
-	top : 30px;
 	width : 570px;
 	overflow : hidden;
 	white-space : nowrap;

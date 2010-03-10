@@ -2,7 +2,7 @@
 	/*
 margin-top: 204px;
 */
-	margin-left: 23px;
+	margin-left: 34px;
 
 	width: 930px;
 	overflow : hidden;
@@ -42,7 +42,13 @@ margin-top: 204px;
 
 .pageContent h1{
 	font-size: 2em;
+	text-align: center;
 }
+
+.pageContent p{
+	text-align: justify;
+}
+
 .pageContent img,
 #content .brd-img{
 	display: block;

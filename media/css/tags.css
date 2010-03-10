@@ -9,7 +9,9 @@ html{
 
 body{
 	background :url(/media/img/top-bg-sky-papirus.jpg) repeat-x top center ;
-	font : 12px arial, sans-serif;
+	font-size: 14px;
+	font-family: 'PF Agora Slab Pro', Cambria, Georgia, sans-serif;
+
 }
 
 a{

@@ -12,14 +12,14 @@
 	border: none;
 }
 #header a#logo{
-	width: 600px;
-	height : 107px;
+	width: 202px;
+	height : 165px;
 	background : url(/media/img/logo.png) no-repeat;
 	display: block;
 	text-indent : -9999px;
 	overflow : hidden;
 	position : absolute;
-	left: 20px;
+	left: 50px;
 	top: 4px;
 }
 /* LANG */
@@ -41,12 +41,12 @@ a.lang{
 	text-align: center;
 	background-position: 50% 0%;
 	background-repeat : no-repeat;
-	color: #FFF;
-	font-size: 1.3em;
+	color: #FFFFFF;
+	font-size: 14px;
 	text-shadow: #000 1px 1px 1px;
 }
 a.lang:hover{
-	border-bottom : 3px solid #222;
+	font-weight: bolder;
 }
 #uk{
 	background-image : url(/media/img/uk.png);
@@ -83,32 +83,18 @@ a.lang:hover{
 	padding-left: 8px;
 	/*background : url(/media/img/menu-left.png) no-repeat top left;*/
 	margin-right: 3px;
-	font-weight: bold;
-	font: 2.0em Impact, Verdana, sans-serif;
 }
 #menu ul li a{
 	height : 42px;
 	/*background : url(/media/img/menu-right.png) no-repeat top right;*/
 	padding-right: 8px;
-	padding-top: 0.6em;
 	overflow : hidden;
 	display : block;
-	color: black;
-	text-shadow: white 1px 1px 1px;
-}
-/*
-#menu ul li:hover{
-	margin-top: 2px;
-	background-position : 0 -42px;	
-}
-#menu ul li:hover a{
-	background-position : right -42px;
-}
-*/
 
-
-#menu ul li.selected{
-	background-position : 0 -84px;	
+	font-size: 28px;
+	font-weight: bold;
+	color: #78472e;
+	text-shadow: #fff 1px 1px 1px;
 }
 
 /*
@@ -119,6 +105,10 @@ a.lang:hover{
 #menu ul li.selected a{
 	cursor : default;
 	background-position : right -84px;
+}
+
+#subblock{
+	height:123px;
 }
 
 /******submenu***********/
@@ -142,8 +132,6 @@ a.lang:hover{
 }
 #breadcrumb{
 	padding-left: 50px;
-	padding-top: 1em;
-	height: 130px;
 }
 
 #breadcrumb h1{

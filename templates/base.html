@@ -22,6 +22,9 @@
 							auto_play:true,
 							thumb_width: 90,
 							thumb_height: 98,
+							show_captions: false,
+							show_prev_next: false,
+							slide_speed: 10000
 						});
 				});
 		</script>
@@ -45,18 +48,19 @@
 		{% language_chooser %}
 	</div>
 	<div style="clear:both;"></div>
-
-	<div id="submenu">
-	  <ul>
-		{% show_menu 1 1 0 100 %}
-	  </ul>
-	</div>
-	
-	<div id="breadcrumb">
-		<ul class="breadcrumb">
-			{#% show_breadcrumb %#}
-		</ul>
-		<h1>{% page_attribute title %}</h1>
+	<div id="subblock">
+		<div id="submenu">
+		  <ul>
+			{% show_menu 1 1 0 100 %}
+		  </ul>
+		</div>
+		
+		<div id="breadcrumb">
+			<ul class="breadcrumb">
+				{#% show_breadcrumb %#}
+			</ul>
+			<h1>{% page_attribute title %}</h1>
+		</div>
 	</div>
 
 	<div id="content">
