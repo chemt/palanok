@@ -12,19 +12,25 @@
 		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 		<script type="text/javascript" src="/media/js/pikachoose-min.js"></script>
+		<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.2.72.js"></script> 
 		<script language="javascript">
 			$(document).ready(
 				function (){
-/*
-									$(".pikachoose ul").PikaChoose({user_thumbs:true, show_prev_next:false});
-				*/
-					$(".pikachoose ul").PikaChoose({delay_caption:false, 
+					$("#body-col div.pikachoose > ul").PikaChoose({delay_caption:false, 
 							auto_play:true,
 							thumb_width: 90,
 							thumb_height: 98,
 							show_captions: false,
 							show_prev_next: false,
 							slide_speed: 10000
+						});
+					
+					$(".left div.pikachoose > ul")
+					.cycle({ 
+    						fx:     'fade', 
+    						speed:  'fast', 
+    						timeout: 0, 
+							next:   '.left div.pikachoose > ul',
 						});
 				});
 		</script>
@@ -49,17 +55,11 @@
 	</div>
 	<div style="clear:both;"></div>
 	<div id="subblock">
-		<div id="submenu">
-		  <ul>
-			{% show_menu 1 1 0 100 %}
-		  </ul>
-		</div>
-		
 		<div id="breadcrumb">
 			<ul class="breadcrumb">
-				{#% show_breadcrumb %#}
+				{% show_breadcrumb %}
 			</ul>
-			<h1>{% page_attribute title %}</h1>
+			<h3>{% page_attribute title %}</h3>
 		</div>
 	</div>
 

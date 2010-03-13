@@ -1,3 +1,8 @@
+/* color constants
+ * text #78472e
+ *  
+ */
+
 /* HEADER */
 
 #header{
@@ -109,9 +114,26 @@ a.lang:hover{
 
 #subblock{
 	height:123px;
+	margin: 0px 30px 0px 29px;
 }
 
-/******submenu***********/
+/**********breadcrumb***********/
+#breadcrumb ul{
+	overflow: hidden;
+}
+#breadcrumb > ul > li{
+	float: left;
+	padding-right: 3px;
+	font-size: 18px;
+}
+#breadcrumb ul li a{
+	float: left;
+	padding-right: 3px;
+	font-size: 14px;
+	padding-top: 4px;
+}
+
+/*********submenu***********/
 #submenu {
 	margin: 0px 30px 0px 29px;
 	overflow : hidden;

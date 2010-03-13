@@ -1,9 +1,5 @@
 #content{
-	/*
-margin-top: 204px;
-*/
 	margin-left: 34px;
-
 	width: 930px;
 	overflow : hidden;
 	background : url(/media/img/papirus-center.jpg) repeat-y 0 0;
@@ -40,11 +36,6 @@ margin-top: 204px;
 	color : #8A1D1D;
 }
 
-.pageContent h1{
-	font-size: 2em;
-	text-align: center;
-}
-
 .pageContent p{
 	text-align: justify;
 }
@@ -54,7 +45,6 @@ margin-top: 204px;
 	display: block;
 	margin : 0;
 	border : 3px solid #edb;
-	background :#091702 url(/media/img/preloader1.gif) no-repeat center;
 	min-height : 50px;
 	min-width : 50px;
 }
@@ -103,7 +93,6 @@ margin-top: 204px;
 #content ul#gallery li img{
 	width : 77px;
 	height : 57px;
-	background :#091702 url(/media/img/preloader1.gif) no-repeat center;
 	border : 3px solid #BBA77C;
 	display : block;
 	padding : 1px;
@@ -120,12 +109,6 @@ margin-top: 204px;
 	text-align : center;
 	margin-top : 5px;
 }
-#content h1{
-	height : 30px;
-	overflow : hidden;
-	margin : 0;
-	padding : 0;
-}
 #content h1 b{
 	display : none;
 }
@@ -133,12 +116,6 @@ margin-top: 204px;
 	height : 30px;
 }
 
-#content h2{
-	height : 16px;
-	overflow : hidden;
-	margin : 0;
-	padding : 0;
-}
 #content h2 b{
 	display : none;
 }
@@ -151,6 +128,11 @@ embed{
 	padding : 0;
 	border : none;
 }
+
+.col h2{
+	clear: both;
+}
+
 div.glink{
 	height: 12px;
 	overflow : hidden;

@@ -5,7 +5,6 @@
         	{% for photo in gallery.sample %}
             	<li class="gallery-photo">
                 	<img rel="{{ photo.get_display_url }}" src="{{ photo.get_display_url }}" alt="{{ photo.title }}"/>
-                	<span>{{ photo.title }}</span>
 	            </li>
     	    {% endfor %}
 		</ul>

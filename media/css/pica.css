@@ -1,14 +1,14 @@
-.pikachoose{width:510px;margin:0 auto 50px auto;}
+#body-col .pikachoose{width:510px;margin:0 auto 50px auto;}
 /* This is the ul you have all your images in */
-.pikachoose ul{padding-left:0;width:510px;margin:0;overflow:hidden;}
-.pikachoose ul li{float: left;padding:2px;margin:0 6px 4px 0;position:relative;overflow:hidden;}
-.pikachoose ul li div img{position:relative;cursor:pointer;}
+#body-col .pikachoose ul{padding-left:0;width:510px;margin:0;overflow:hidden;}
+#body-col .pikachoose ul li{float: left;padding:2px;margin:0 6px 4px 0;position:relative;overflow:hidden;}
+#body-col .pikachoose ul li div img{position:relative;cursor:pointer;}
 
 /* this is the surroundner for all your elements. This is also the fake border around the main img and room for caption */
 .pika_main{width:506px;height:375px;display:block;position:relative;}
 /*sine we give it the fake border, you need to position the image a little. */
 .pika_main_img{position:absolute;top:2px;left:2px;}
-.pika_back_img{position:relative;top:0px;}
+/* .pika_back_img{position:relative;top:0px;} */
 .pika_subdiv{position:relative;padding:2px;}
 .pika_subdiv img, .pika_subdiv a img{border:none;}
 .pika_caption{width:100%; padding-top:4px;text-align:center;position:absolute;bottom:7px;left:3px;text-shadow: white 1px 1px 1px; font-size:2em;}
@@ -26,3 +26,12 @@
 .pika_prev_hover{position:absolute;top:5px;left:5px;height:456px;width:100px;background:url('/media/img/rewind.png') top left no-repeat;}
 .pika_next_hover{position:absolute;top:5px;right:5px;height:456px;width:100px;background:url('/media/img/fastf.png') top right no-repeat;}
 
+
+.left div.pikachoose > ul li {
+	display: block;
+}
+
+.left div.pikachoose > ul li img {
+	height: 187px;
+	width: 250px;
+}

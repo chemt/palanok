@@ -171,7 +171,6 @@ CMS_PLACEHOLDER_CONF = {
     },
     
     'side-column': {
-        "plugins": ('LinkPlugin', 'PicturePlugin', 'FilePlugin', 'FlashPlugin', 'TextPlugin', 'SnippetPlugin'),
         "extra_context": {"width":250},
         "name":gettext("column")
     },
@@ -181,6 +180,8 @@ CMS_PLACEHOLDER_CONF = {
 CMS_NAVIGATION_EXTENDERS = (
     ('cmsplugin_photologue.menu.get_nodes', gettext('Photologue navigation')),
 )
+
+CMSPLUGIN_PHOTOLOGUE_CSS_CHOICES = (('0', ''),('1', 'small-gallery'),('2', 'left'),('3', 'right'),('4', 'center'),)
 
 CMS_SOFTROOT = True
 CMS_MODERATOR = False

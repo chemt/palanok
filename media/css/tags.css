@@ -1,16 +1,17 @@
 body, html{
-	margin : 0;
-	padding : 0;
+	margin: 0;
+	padding: 0;
 }
 
 html{
-	background :#bceffc;
+	background: #bceffc;
 }
 
 body{
-	background :url(/media/img/top-bg-sky-papirus.jpg) repeat-x top center ;
+	background: url(/media/img/top-bg-sky-papirus.jpg) repeat-x top center ;
 	font-size: 14px;
-	font-family: 'PF Agora Slab Pro', Cambria, Georgia, sans-serif;
+	font-family: arial, 'PF Agora Slab Pro', Cambria, Georgia, sans-serif;
+	min-width:1000px;
 
 }
 
@@ -41,6 +42,20 @@ h1,h2,h3,h4,h5,h6{
 	margin : 0;
 	padding : 0;
 }
+
+h2{
+	font-size: 1.8em;
+}
+
+h1{
+	font-size: 2em;
+	text-align: center;
+}
+h3{
+	font-size: 1.4em;
+}
+
+
 
 img{
 	border : none;

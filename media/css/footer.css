@@ -18,8 +18,20 @@
 }
 
 #footer #footer-menu ul li{
+	display: list-item;
+	padding-left: 10px;
+	font-size: 12px;
+}
+
+#footer #footer-menu > ul > li{
 	float: left;
-	padding-right: 2em;
+	overflow: hidden;
+	font-size: 16px;
+}
+
+
+#footer #footer-menu ul li .selected{
+		font-weight: bolder;
 }
 
 #footer #footer-menu a{
@@ -28,7 +40,9 @@
 }
 #footer #copyright{
 	font-size: 11px;
-	width : 570px;
+	position : absolute;
+	left : 85px;
+	bottom : 20px;
 	overflow : hidden;
 	white-space : nowrap;
 }
