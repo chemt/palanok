@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+				{% block content %}
+				<div class="main full">
+					<div id="top" class="full">
+							{% placeholder top %}
+					</div> 					
+					<div id="left-col" class="left col"> 
+							{% placeholder side-column %}
+					</div> 
+
+					<div id="body-col" class="body right"> 
+							<div class="pageContent">
+								{% placeholder body %}
+							</div>
+					</div>
+				</div>
+				{% endblock %}

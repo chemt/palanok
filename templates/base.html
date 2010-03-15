@@ -8,14 +8,17 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="{{ MEDIA_URL }}css/main.css" rel="stylesheet" type="text/css" />
 	{% block header %}
-		<link type="text/css" href="/media/css/pica.css" rel="stylesheet" />
+		<link type="text/css" href="{{ MEDIA_URL }}css/pica.css" rel="stylesheet" />
 		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-		<script type="text/javascript" src="/media/js/pikachoose-min.js"></script>
-		<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.2.72.js"></script> 
+		<script type="text/javascript" src="{{ MEDIA_URL }}js/cufon-yui.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}js/mukachev_400.font.js"></script> 
+		<script type="text/javascript" src="{{ MEDIA_URL }}js/pikachoose-min.js"></script>
+		<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.2.72.js"></script>
 		<script language="javascript">
 			$(document).ready(
 				function (){
+					Cufon.replace("#menu ul");
 					$("#body-col div.pikachoose > ul").PikaChoose({delay_caption:false, 
 							auto_play:true,
 							thumb_width: 90,
@@ -43,44 +46,34 @@
 	<div id="header">
 		<a id="logo" href="/" title="Palanok — hotel restaurant in Mukachevo">Palanok Hotel in Mukachevo. &lquote;Паланок&rquote; Готель в Мукачево. hotelpalanok.com</a> 
 	</div>
-	
-	<div id="menu">
-	  <ul>
-		{% show_menu 0 0 0 0 %}
-	  </ul>
-	</div>
 
-	<div id="languages">
-		{% language_chooser %}
-	</div>
-	<div style="clear:both;"></div>
-	<div id="subblock">
-		<div id="breadcrumb">
-			<ul class="breadcrumb">
-				{% show_breadcrumb %}
-			</ul>
-			<h3>{% page_attribute title %}</h3>
+	<div id="top-block">
+		<div id="menu">
+		  <ul>
+			{% show_menu 0 0 0 0 %}
+		  </ul>
+		</div>
+	
+		<div id="languages">
+			{% language_chooser %}
+		</div>
+		<div style="clear:both;"></div>
+		<div id="subblock">
+			<div id="breadcrumb">
+				<ul class="breadcrumb">
+					{% show_breadcrumb %}
+				</ul>
+				<h3>{% page_attribute title %}</h3>
+			</div>
 		</div>
 	</div>
-
+	
+	
 	<div id="content">
 		<div id="papirus-top">
 			<div id="main-content">
 				{% block content %}
-					<div id="top" class="full">
-							{% placeholder top %}
-					</div> 
 
-
-					<div id="left-col" class="left col"> 
-							{% placeholder side-column %}
-					</div> 
-
-					<div id="body-col" class="body right"> 
-							<div class="pageContent">
-								{% placeholder body %}
-							</div>
-					</div>
 				{% endblock %}
 			</div>
 		</div>

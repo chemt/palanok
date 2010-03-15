@@ -153,6 +153,7 @@ APPEND_SLASH = True
 CMS_TEMPLATES = (
     ('2col-left.html',  gettext('with left column')),
     ('2col-right.html', gettext('with right column')),
+    ('main.htm', gettext('main page')),
 )
 
 CMS_APPLICATIONS_URLS = (

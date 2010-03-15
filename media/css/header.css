@@ -10,7 +10,7 @@
 	background : url(/media/img/preloader1.gif) no-repeat 50% 60%;
 	overflow : hidden;
 	position : relative;
-	height : 200px;
+	height : 170px;
 }
 #header img{
 	display : block;
@@ -19,7 +19,7 @@
 #header a#logo{
 	width: 202px;
 	height : 165px;
-	background : url(/media/img/logo.png) no-repeat;
+	/*background : url(/media/img/logo.png) no-repeat;*/
 	display: block;
 	text-indent : -9999px;
 	overflow : hidden;
@@ -27,12 +27,16 @@
 	left: 50px;
 	top: 4px;
 }
+
+#top-block{	height:147px; overflow:hidden;}
+
 /* LANG */
 #languages {
 	float: right;
-	width: 152px;
 	overflow: hidden;
+	padding-top: 10px;
 	padding-right: 20px;
+	width: 152px;
 }
 
 a.lang{
@@ -69,15 +73,17 @@ a.lang:hover{
 
 /* MENU */
 #menu{
-	/*height: 42px;*/
-	width : 800px;
+	height: 72px;
+	width: 480px;
+	height: 42px;
+	padding-left: 320px;
+	padding-top: 10px;
 	float: left;
 	/*overflow : hidden;*/
 }
 #menu ul{
 	height: 42px;
-	width : 740px;
-	padding-left : 50px;
+	width : 500px;
 	overflow : hidden;
 	background : url(/media/img/menu_dec_right.jpg) no-repeat top right;
 }
@@ -87,16 +93,13 @@ a.lang:hover{
 	overflow : hidden;
 	padding-left: 8px;
 	/*background : url(/media/img/menu-left.png) no-repeat top left;*/
-	margin-right: 3px;
 }
 #menu ul li a{
 	height : 42px;
 	/*background : url(/media/img/menu-right.png) no-repeat top right;*/
-	padding-right: 8px;
-	overflow : hidden;
 	display : block;
-
-	font-size: 28px;
+	font-family: mukachev;
+	font-size: 22px;
 	font-weight: bold;
 	color: #78472e;
 	text-shadow: #fff 1px 1px 1px;
@@ -113,7 +116,7 @@ a.lang:hover{
 }
 
 #subblock{
-	height:123px;
+	height:73px;
 	margin: 0px 30px 0px 29px;
 }
 

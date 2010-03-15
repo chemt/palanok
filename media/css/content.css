@@ -1,21 +1,21 @@
 #content{
-	margin-left: 34px;
+	margin-left: 33px;
 	width: 930px;
-	overflow : hidden;
 	background : url(/media/img/papirus-center.jpg) repeat-y 0 0;
 }
 #content #papirus-top{
 	width: 100%;
 	overflow : hidden;
-	background : url(/media/img/papirus_top.jpg) no-repeat 0 0;
+	margin-left:1px;
+	background : url(/media/img/papirus-top.jpg) no-repeat 0 0;
 }
 
 #content #main-content{
 	overflow : hidden;
-	margin : 0 60px;
+	margin : 30px 30px 30px 37px;
 }
 
-.col{width: 250px; overflow: hidden;}
+.col{width: 285px; overflow: hidden; padding: 3px;}
 .right{float: right;}
 .left{float: left;}
 .full{width: 100%;}
@@ -23,7 +23,8 @@
 #top{}
 
 #body-col{
-	width : 520px;
+	width : 566px;
+	padding: 3px;
 	overflow : hidden;
 }
 
