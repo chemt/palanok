@@ -18,8 +18,10 @@
 		<script language="javascript">
 			$(document).ready(
 				function (){
-					Cufon.replace("#menu ul");
-					$("#body-col div.pikachoose > ul").PikaChoose({delay_caption:false, 
+					Cufon.replace("#menu ul>li>a", {fontFamily: "mukachev"});
+					
+					// Gallery images with humbnails
+					$("#body-col .photo-gallery > ul").PikaChoose({delay_caption:false, 
 							auto_play:true,
 							thumb_width: 90,
 							thumb_height: 98,
@@ -28,12 +30,13 @@
 							slide_speed: 10000
 						});
 					
-					$(".left div.pikachoose > ul")
+					// imagebox
+					$(".left .photo-gallery>ul")
 					.cycle({ 
     						fx:     'fade', 
     						speed:  'fast', 
-    						timeout: 0, 
-							next:   '.left div.pikachoose > ul',
+    						timeout: 0,
+							next: '.left .photo-gallery > ul > li'
 						});
 				});
 		</script>

@@ -15,7 +15,7 @@
 	margin : 30px 30px 30px 37px;
 }
 
-.col{width: 285px; overflow: hidden; padding: 3px;}
+.col{width: 275px; overflow: hidden; padding: 8px;}
 .right{float: right;}
 .left{float: left;}
 .full{width: 100%;}

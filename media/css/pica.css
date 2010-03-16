@@ -1,11 +1,11 @@
-#body-col .pikachoose{width:510px;margin:0 auto 50px auto;}
+#body-col .photo-gallery{width:550px; margin: 0 auto 30px auto;}
 /* This is the ul you have all your images in */
-#body-col .pikachoose ul{padding-left:0;width:510px;margin:0;overflow:hidden;}
-#body-col .pikachoose ul li{float: left;padding:2px;margin:0 6px 4px 0;position:relative;overflow:hidden;}
-#body-col .pikachoose ul li div img{position:relative;cursor:pointer;}
+#body-col .photo-gallery ul{padding-left:0;width:500px;margin:0;overflow:hidden;padding: 0px 23px 35px 23px; background: url('/media/img/ramka_2.png') bottom center no-repeat;}
+#body-col .photo-gallery ul li{float: left;padding:2px;margin:0 6px 4px 0;position:relative;overflow:hidden;}
+#body-col .photo-gallery ul li div img{position:relative;cursor:pointer;}
 
 /* this is the surroundner for all your elements. This is also the fake border around the main img and room for caption */
-.pika_main{width:506px;height:375px;display:block;position:relative;}
+#body-col .photo-gallery .pika_main{width:495px;height:375px; padding: 36px 23px; background: url('/media/img/ramka_1.png') top center no-repeat;display:block;position:relative;}
 /*sine we give it the fake border, you need to position the image a little. */
 .pika_main_img{position:absolute;top:2px;left:2px;}
 /* .pika_back_img{position:relative;top:0px;} */
@@ -27,11 +27,11 @@
 .pika_next_hover{position:absolute;top:5px;right:5px;height:456px;width:100px;background:url('/media/img/fastf.png') top right no-repeat;}
 
 
-.left div.pikachoose > ul li {
+.left .photo-gallery > ul li {
 	display: block;
 }
 
-.left div.pikachoose > ul li img {
+.left .photo-gallery > ul li img {
 	height: 187px;
 	width: 250px;
 }

@@ -98,7 +98,7 @@ a.lang:hover{
 	height : 42px;
 	/*background : url(/media/img/menu-right.png) no-repeat top right;*/
 	display : block;
-	font-family: mukachev;
+	font-family: "mukachev", Garamond;
 	font-size: 22px;
 	font-weight: bold;
 	color: #78472e;
