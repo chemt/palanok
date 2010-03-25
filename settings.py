@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Django settings for cms project.
 import os
 PROJECT_DIR = os.path.dirname(__file__)
@@ -151,9 +152,9 @@ CMS_LANGUAGE_CONF = {
 APPEND_SLASH = True
 
 CMS_TEMPLATES = (
-    ('2col-left.html',  gettext('with left column')),
-    ('2col-right.html', gettext('with right column')),
-    ('main.htm', gettext('main page')),
+    ('2col-left.html',  gettext(u'с левой колонкой')),
+    ('2col-right.html', gettext(u'с правой колонкой')),
+    ('main.htm', gettext(u'Главная страница')),
 )
 
 CMS_APPLICATIONS_URLS = (
@@ -174,6 +175,19 @@ CMS_PLACEHOLDER_CONF = {
     'side-column': {
         "extra_context": {"width":250},
         "name":gettext("column")
+    },
+    
+    'info1':{"extra_context": {"width":200},
+        "name":gettext("info1")
+    },
+    'info2':{"extra_context": {"width":200},
+        "name":gettext("info2")
+    },
+    'info3':{"extra_context": {"width":200},
+        "name":gettext("info3")
+    },
+    'info4':{"extra_context": {"width":200},
+        "name":gettext("info4")
     },
 }
 

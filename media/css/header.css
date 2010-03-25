@@ -1,6 +1,6 @@
 /* color constants
  * text #78472e
- *  
+ * border color #9e6737
  */
 
 /* HEADER */
@@ -34,7 +34,7 @@
 #languages {
 	float: right;
 	overflow: hidden;
-	padding-top: 10px;
+	padding-top: 20px;
 	padding-right: 20px;
 	width: 152px;
 }
@@ -77,7 +77,7 @@ a.lang:hover{
 	width: 480px;
 	height: 42px;
 	padding-left: 320px;
-	padding-top: 10px;
+	padding-top: 20px;
 	float: left;
 	/*overflow : hidden;*/
 }
@@ -99,10 +99,11 @@ a.lang:hover{
 	/*background : url(/media/img/menu-right.png) no-repeat top right;*/
 	display : block;
 	font-family: "mukachev", Garamond;
-	font-size: 22px;
+	font-size: 27px;
 	font-weight: bold;
 	color: #78472e;
 	text-shadow: #fff 1px 1px 1px;
+	text-decoration: none;
 }
 
 /*
@@ -116,24 +117,25 @@ a.lang:hover{
 }
 
 #subblock{
-	height:73px;
 	margin: 0px 30px 0px 29px;
+	padding-left: 250px;
+	color:  #78472e;
 }
+#subblock a{color: #78472e;}
 
 /**********breadcrumb***********/
-#breadcrumb ul{
-	overflow: hidden;
-}
+#breadcrumb ul{	overflow: hidden;}
 #breadcrumb > ul > li{
 	float: left;
 	padding-right: 3px;
-	font-size: 18px;
+	font-size: 14px;
+	font-weight: bold;
 }
 #breadcrumb ul li a{
 	float: left;
 	padding-right: 3px;
 	font-size: 14px;
-	padding-top: 4px;
+	color: #A7613F;
 }
 
 /*********submenu***********/

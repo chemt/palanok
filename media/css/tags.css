@@ -1,3 +1,8 @@
+/* color constants
+ * text #78472e
+ * border color #9e6737
+ */
+
 body, html{
 	margin: 0;
 	padding: 0;
@@ -8,6 +13,7 @@ html{
 }
 
 body{
+	color: #78472e;
 	background: url(/media/img/top-bg-sky-papirus.jpg) repeat-x top center ;
 	font-size: 14px;
 	font-family: arial, 'PF Agora Slab Pro', Cambria, Georgia, sans-serif;
@@ -17,6 +23,7 @@ body{
 
 a{
 	text-decoration : underline;
+	color: #7f5026;
 }
 
 a img{
@@ -25,6 +32,7 @@ a img{
 
 a:hover{
 	text-decoration : none;
+	color: #7f5026;
 }
 
 ul,ol,dl,li,dd,dt{

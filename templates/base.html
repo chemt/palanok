@@ -19,6 +19,7 @@
 			$(document).ready(
 				function (){
 					Cufon.replace("#menu ul>li>a", {fontFamily: "mukachev"});
+					Cufon.replace("h1, h2", {fontFamily: "mukachev"});
 					
 					// Gallery images with humbnails
 					$("#body-col .photo-gallery > ul").PikaChoose({delay_caption:false, 
@@ -31,13 +32,42 @@
 						});
 					
 					// imagebox
-					$(".left .photo-gallery>ul")
+					$(".left .photo-gallery.center>ul")
+					.addClass("pointer")
 					.cycle({ 
     						fx:     'fade', 
     						speed:  'fast', 
     						timeout: 0,
-							next: '.left .photo-gallery > ul > li'
+							next: '.left .photo-gallery.center>ul > li'
+						})
+					;
+
+					$(".left .photo-gallery.right>ul")
+					.cycle({ 
+    						fx:     'fade', 
+    						speed:  'fast', 
+    						timeout: 0,
+							next: '.left .photo-gallery.right>ul > li'
+						})
+					;
+					
+					$("photo-gallery .left .photo-gallery.right img")
+					.addClass("pointer");
+					
+					$("photo-gallery .center .photo-gallery.right img")
+					.addClass("pointer");
+
+						
+/*
+					$(".left .photo-gallery.left>ul")
+					.cycle({ 
+    						fx:     'fade', 
+    						speed:  'fast', 
+    						timeout: 0,
+							next: '.left .photo-gallery.left>ul > li'
 						});
+
+*/
 				});
 		</script>
 
@@ -62,12 +92,13 @@
 		</div>
 		<div style="clear:both;"></div>
 		<div id="subblock">
+<!--
 			<div id="breadcrumb">
 				<ul class="breadcrumb">
 					{% show_breadcrumb %}
 				</ul>
-				<h3>{% page_attribute title %}</h3>
 			</div>
+-->		
 		</div>
 	</div>
 	

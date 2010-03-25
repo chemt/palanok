@@ -1,3 +1,9 @@
+/* color constants
+ * text #78472e
+ * border color #9e6737
+ */
+
+
 #content{
 	margin-left: 33px;
 	width: 930px;
@@ -19,6 +25,7 @@
 .right{float: right;}
 .left{float: left;}
 .full{width: 100%;}
+.pointer{cursor:hand;}
 
 #top{}
 
@@ -29,87 +36,28 @@
 }
 
 #content p{
-	color : #6a6153;
-	margin:0 0 15px 0;
+	margin:0 0 8px 0;
 	font-size: 14px;
-}
-#content a{
-	color : #8A1D1D;
+	padding: 0 10px;
 }
 
 .pageContent p{
 	text-align: justify;
 }
 
-.pageContent img,
-#content .brd-img{
+.pageContent img{
 	display: block;
-	margin : 0;
-	border : 3px solid #edb;
+	margin : 0 auto;
 	min-height : 50px;
 	min-width : 50px;
 }
 
 .pageContent p img,
-#content p img.brd-img{
+#content p img{
 	margin-right : 10px;
-	float : left;
 	display : inline;
 }
-#content ul.list{
-	color: #6a6153;
-	font-size : 11px;
-}
-#content ul.list li{
-	background: url(/media/img/layout/common/arrow.gif) no-repeat 5px 7px;
-	padding : 3px 0 3px 18px;
-}
 
-#content ul#gallery{
-	width: 291px;
-	overflow: hidden;
-	margin-right : -11px;
-	font-size : 11px;
-}
-#content ul#gallery li{
-	width: 85px;
-	height : 90px;
-	display: inline;
-	float : left;
-	margin : 0 12px 5px 0;
-	overflow : hidden;
-}
-#content ul#gallery li a{
-	display : block;
-	width : 85px;
-	overflow : hidden;
-	height : 90px;
-	color: #8A1D1D;
-	text-decoration : none;
-}
-#content ul#gallery li a:hover{
-	color: #8A1D1D;
-	text-decoration : underline;
-}
-#content ul#gallery li img{
-	width : 77px;
-	height : 57px;
-	border : 3px solid #BBA77C;
-	display : block;
-	padding : 1px;
-}
-.without-descr li,
-.without-descr li a{
-	height : 72px!important;
-}
-#content ul#gallery li a:hover img{
-	border-color : #f0e0d0;
-}
-#content ul#gallery li span{
-	display : block;
-	text-align : center;
-	margin-top : 5px;
-}
 #content h1 b{
 	display : none;
 }
@@ -123,6 +71,22 @@
 #content h2 embed{
 	height : 16px;
 }
+
+
+
+#body-col ul{
+	color: #6a6153;
+	padding: 10px;
+}
+#body-col ul li{
+	display:list-item;
+	list-style: circle inside;
+}
+#body-col table{ margin-top: 15px;}
+
+
+
+
 embed{
 	display : block;
 	margin : 0;
@@ -132,6 +96,23 @@ embed{
 
 .col h2{
 	clear: both;
+}
+
+.col a{ text-decoration: none;}
+
+h1{	font-size: 42px; }
+h2{	text-align: center; padding-bottom: 10px;}
+#left-col p { padding-left: 15px;}
+
+
+#left-col ul li img {
+	margin-left: 10px;
+	border: #9e6737 solid 2px;
+}
+
+.info-block{
+	border: #9e6737 solid 2px;
+	vertical-align: top;
 }
 
 div.glink{
