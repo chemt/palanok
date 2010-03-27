@@ -1,13 +1,60 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 
+{% block header %}
+{{ block.super }}
+		<script language="javascript">
+				$(document).ready(
+				function (){
+					// Gallery images with thumbnails
+					$("#body-col .photo-gallery > ul").PikaChoose({delay_caption:false, 
+							auto_play:true,
+							thumb_width: 90,
+							thumb_height: 98,
+							show_captions: false,
+							show_prev_next: false,
+							slide_speed: 10000
+						});
+					
+					// imagebox
+					$("#left-col #nomeri .photo-gallery ul")
+					.before('<a id="prev" href="#"> &larr</a><a id="next" class="right" href="#"> &rarr</a>')
+					.cycle({ 
+    						fx:     'fade', 
+    						speed:  'fast', 
+    						timeout: 0,
+							//next: '#left-col #nomeri .photo-gallery ul ',
+							next: '#nomeri #next, #nomeri img', 
+    						prev: '#nomeri #prev'  
+						});
+				});
+		</script>
+		<style>
+#nav {margin-left: 12px; border: 1px solid #9E6737}
+#nav a {text-decoration: none; margin: 0 5px; padding: 3px 5px;  }
+#nav a.activeSlide { color: #9E6737 }
+#nav a:focus { outline: none; }</style>
+{% endblock header %}
+
 				{% block content %}
 				<div class="main full">
 					<div id="top" class="full">
 							{% placeholder top %}
 					</div> 					
-					<div id="left-col" class="left col"> 
-							{% placeholder side-column %}
+					<div id="left-col" class="left col">
+						<div id="nomeri">
+							{% placeholder nomeri %}
+						</div>
+						<div id="price">
+							{% placeholder price %}
+						</div>
+						<div id="akcii">
+							{% placeholder akcii %}
+						</div>
+						<div id="gallery">
+							{% placeholder gallery %}
+						</div>
+						
 					</div> 
 
 					<div id="body-col" class="body right"> 

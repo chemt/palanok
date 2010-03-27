@@ -164,31 +164,28 @@ CMS_APPLICATIONS_URLS = (
 CMS_PLACEHOLDER_CONF = {                        
     'body': {
         "extra_context": {"width":450},
-        "name":gettext("body"),
+        "name":gettext(u"Основной блок"),
     },
 
     'top': {
         "extra_context": {"width":810},
-        "name":gettext("top"),
+        "name":gettext(u"Блок Верхний"),
     },
     
     'side-column': {
         "extra_context": {"width":250},
-        "name":gettext("column")
+        "name":gettext(u"Блок Колонка")
     },
     
-    'info1':{"extra_context": {"width":200},
-        "name":gettext("info1")
-    },
-    'info2':{"extra_context": {"width":200},
-        "name":gettext("info2")
-    },
-    'info3':{"extra_context": {"width":200},
-        "name":gettext("info3")
-    },
-    'info4':{"extra_context": {"width":200},
-        "name":gettext("info4")
-    },
+    'nomeri':{"extra_context": {"width":200}, "name":gettext(u"Блок Номера")},
+    'price':{"extra_context": {"width":200}, "name":gettext(u"Блок Цены")},
+    'akcii':{"extra_context": {"width":200}, "name":gettext(u"Блок Акции")},
+    'gallery':{"extra_context": {"width":200}, "name":gettext(u"Блок Галерея")},
+
+    'info1':{"extra_context": {"width":200}, "name":gettext(u"info1")},
+    'info2':{"extra_context": {"width":200}, "name":gettext(u"info2")},
+    'info3':{"extra_context": {"width":200}, "name":gettext(u"info3")},
+    'info4':{"extra_context": {"width":200}, "name":gettext(u"info4")},
 }
 
 

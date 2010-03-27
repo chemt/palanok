@@ -21,7 +21,7 @@
 	margin : 30px 30px 30px 37px;
 }
 
-.col{width: 275px; overflow: hidden; padding: 8px;}
+.col{width: 275px; overflow: hidden; padding: 3px 0px 0px 15px;}
 .right{float: right;}
 .left{float: left;}
 .full{width: 100%;}
@@ -35,12 +35,6 @@
 	overflow : hidden;
 }
 
-#content p{
-	margin:0 0 8px 0;
-	font-size: 14px;
-	padding: 0 10px;
-}
-
 .pageContent p{
 	text-align: justify;
 }
@@ -52,28 +46,6 @@
 	min-width : 50px;
 }
 
-.pageContent p img,
-#content p img{
-	margin-right : 10px;
-	display : inline;
-}
-
-#content h1 b{
-	display : none;
-}
-#content h1 embed{
-	height : 30px;
-}
-
-#content h2 b{
-	display : none;
-}
-#content h2 embed{
-	height : 16px;
-}
-
-
-
 #body-col ul{
 	color: #6a6153;
 	padding: 10px;
@@ -84,62 +56,12 @@
 }
 #body-col table{ margin-top: 15px;}
 
+.col h2{ clear: both; }
 
-
-
-embed{
-	display : block;
-	margin : 0;
-	padding : 0;
-	border : none;
-}
-
-.col h2{
-	clear: both;
-}
-
-.col a{ text-decoration: none;}
+.col a{ text-decoration: none; }
 
 h1{	font-size: 42px; }
-h2{	text-align: center; padding-bottom: 10px;}
-#left-col p { padding-left: 15px;}
+h2{	text-align: center; padding-bottom: 10px; }
 
+#left-col ul li img {	border: #9e6737 solid 2px;}
 
-#left-col ul li img {
-	margin-left: 10px;
-	border: #9e6737 solid 2px;
-}
-
-.info-block{
-	border: #9e6737 solid 2px;
-	vertical-align: top;
-}
-
-div.glink{
-	height: 12px;
-	overflow : hidden;
-	text-align : right;
-	margin : 10px 0 0 0;
-}
-div.glink a:hover img{
-	opacity: .85;
-	-moz-opacity: .85;
-	filter: alpha(opacity=85);
-} 
-/***/
-#linkuri{
-	width: 825px;
-	margin-right : -15px;
-	overflow : hidden;	
-}
-#linkuri li{
-	width: 250px;
-	padding : 0 25px 20px 0;
-	float : left;
-	font-size : 11px;
-}
-#linkuri li b,
-#linkuri li a{
-	font-weight: bold;
-	font-size : 12px;
-} 
