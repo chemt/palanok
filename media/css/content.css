@@ -27,7 +27,7 @@
 .full{width: 100%;}
 .pointer{cursor:hand;}
 
-#top{}
+#top{ padding-left: 20px;}
 
 #body-col{
 	width : 566px;
@@ -56,12 +56,25 @@
 }
 #body-col table{ margin-top: 15px;}
 
-.col h2{ clear: both; }
-
-.col a{ text-decoration: none; }
-
-h1{	font-size: 42px; }
-h2{	text-align: center; padding-bottom: 10px; }
-
 #left-col ul li img {	border: #9e6737 solid 2px;}
 
+.info-block{ border: #9e6737 solid 2px; vertical-align: top;}
+
+#nomeri a#prev ,
+#nomeri a#next { font-family: Impact; font-size: 32px; font-weight: bold; text-decoration: none; line-height: 15px;}
+
+#price { padding-bottom: 10px; }
+#price strong{ float: right; padding-right: 13px; } 
+
+#akcii { border:2px solid  #9e6737;}
+
+
+/* Номера */
+.nomeri { padding: 15px;}
+.nomeri > a {
+	font-size: 42px;
+	text-align: center;
+	display:block;
+	clear: both;
+}
+.nomeri img {padding-right: 20px;}

@@ -1,30 +1,39 @@
-#body-col .photo-gallery{width:550px; margin: 0 auto 30px auto;}
+#body-col .photo-gallery{width:550px; margin: 0 auto;}
 /* This is the ul you have all your images in */
 #body-col .photo-gallery ul{padding-left:0;width:500px;margin:0;overflow:hidden;padding: 0px 23px 35px 23px; background: url('/media/img/ramka_2.png') bottom center no-repeat;}
 #body-col .photo-gallery ul li{float: left;padding:2px;margin:0 6px 4px 0;position:relative;overflow:hidden;}
 #body-col .photo-gallery ul li div img{position:relative;cursor:pointer;}
-
 /* this is the surroundner for all your elements. This is also the fake border around the main img and room for caption */
 #body-col .photo-gallery .pika_main{width:495px;height:375px; padding: 36px 23px; background: url('/media/img/ramka_1.png') top center no-repeat;display:block;position:relative;}
+
+.nomeri .photo-gallery{width:550px; margin: 0 auto;}
+.nomeri .photo-gallery ul{padding-left:0;width:500px;margin:0;overflow:hidden;padding: 0px 23px 35px 23px; background: url('/media/img/ramka_2.png') bottom center no-repeat;}
+.nomeri .photo-gallery ul li{float: left;padding:2px;margin:0 6px 4px 0;position:relative;overflow:hidden;}
+.nomeri .photo-gallery ul li div img{position:relative;cursor:pointer;}
+.nomeri .photo-gallery .pika_main{width:495px;height:375px; padding: 36px 23px; background: url('/media/img/ramka_1.png') top center no-repeat;display:block;position:relative;}
+
+
+
 /*sine we give it the fake border, you need to position the image a little. */
 .pika_main_img{position:absolute;top:2px;left:2px;}
 /* .pika_back_img{position:relative;top:0px;} */
 .pika_subdiv{position:relative;padding:2px;}
 .pika_subdiv img, .pika_subdiv a img{border:none;}
+
 .pika_caption{width:100%; padding-top:4px;text-align:center;position:absolute;bottom:7px;left:3px;text-shadow: white 1px 1px 1px; font-size:2em;}
 .pika_caption a{color:white;}
 
-.pika_play{position:absolute;z-index:1;left:50%;margin-left:-25px;width:50px;top:5px;}
-.pika_play a{position:relative;margin-left:auto;cursor:pointer;display: block;width:50px;height:50px;background:url('/media/img/play.png') top center no-repeat;}
-.pika_play a{position:relative;margin-left:auto;cursor:pointer;display: block;width:50px;height:50px;background:url('/media/img/pause.png') top center no-repeat;}
+.pika_play{position:absolute;z-index:1;left:50%;margin-left:-25px;width:1px;top:1px;}
+.pika_play a{position:relative;margin-left:auto;cursor:pointer;display: block;width:1px;height:1px;background:url('/media/img/play.png') top center no-repeat;}
+.pika_play a{position:relative;margin-left:auto;cursor:pointer;display: block;width:1px;height:1px;background:url('/media/img/pause.png') top center no-repeat;}
 
 .pika_navigation a{font-size: 12px; text-decoration: none;}
 .pika_navigation a:hover{text-decoration: underline;}
 .pika_navigation{padding-top:10px;clear:both;text-align:center;}
 
 /* if you want to 'hide' these jus make their height and width 1px */
-.pika_prev_hover{position:absolute;top:5px;left:5px;height:456px;width:100px;background:url('/media/img/rewind.png') top left no-repeat;}
-.pika_next_hover{position:absolute;top:5px;right:5px;height:456px;width:100px;background:url('/media/img/fastf.png') top right no-repeat;}
+.pika_prev_hover{position:absolute;top:0px;left:3px;height:375px;width:245px;background:url('/media/img/rewind.png') center left no-repeat;}
+.pika_next_hover{position:absolute;top:0px;right:2px;height:375px;width:245px;background:url('/media/img/fastf.png') center right no-repeat;}
 
 
 .left .photo-gallery > ul li {

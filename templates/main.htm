@@ -8,7 +8,7 @@
 				function (){
 					// Gallery images with thumbnails
 					$("#body-col .photo-gallery > ul").PikaChoose({delay_caption:false, 
-							auto_play:true,
+							auto_play: true,
 							thumb_width: 90,
 							thumb_height: 98,
 							show_captions: false,
@@ -18,7 +18,7 @@
 					
 					// imagebox
 					$("#left-col #nomeri .photo-gallery ul")
-					.before('<a id="prev" href="#"> &larr</a><a id="next" class="right" href="#"> &rarr</a>')
+					.after('<a id="prev" href="#"> &larr</a><a id="next" class="right" href="#"> &rarr</a>')
 					.cycle({ 
     						fx:     'fade', 
     						speed:  'fast', 
@@ -29,11 +29,6 @@
 						});
 				});
 		</script>
-		<style>
-#nav {margin-left: 12px; border: 1px solid #9E6737}
-#nav a {text-decoration: none; margin: 0 5px; padding: 3px 5px;  }
-#nav a.activeSlide { color: #9E6737 }
-#nav a:focus { outline: none; }</style>
 {% endblock header %}
 
 				{% block content %}

@@ -155,6 +155,8 @@ CMS_TEMPLATES = (
     ('2col-left.html',  gettext(u'с левой колонкой')),
     ('2col-right.html', gettext(u'с правой колонкой')),
     ('main.htm', gettext(u'Главная страница')),
+    ('nomers_list.html', gettext(u'Страница с номерами')),
+    
 )
 
 CMS_APPLICATIONS_URLS = (

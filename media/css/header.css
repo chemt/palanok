@@ -12,12 +12,9 @@
 	position : relative;
 	height : 170px;
 }
-#header img{
-	display : block;
-	border: none;
-}
+#header img{ display : block; border: none; }
 #header a#logo{
-	width: 202px;
+	width: 800px;
 	height : 165px;
 	/*background : url(/media/img/logo.png) no-repeat;*/
 	display: block;
@@ -54,21 +51,12 @@ a.lang{
 	font-size: 14px;
 	text-shadow: #000 1px 1px 1px;
 }
-a.lang:hover{
-	font-weight: bolder;
-}
-#uk{
-	background-image : url(/media/img/uk.png);
-}
-#ru{
-	background-image : url(/media/img/ru.png);
-}
-#en{
-	background-image : url(/media/img/en.png);
-}
-#hu{
-	background-image : url(/media/img/hu.png);
-}
+a.lang:hover{ font-weight: bolder; }
+
+#uk{ background-image : url(/media/img/uk.png); }
+#ru{ background-image : url(/media/img/ru.png); }
+#en{ background-image : url(/media/img/en.png); }
+#hu{ background-image : url(/media/img/hu.png); }
 
 
 /* MENU */
@@ -76,8 +64,8 @@ a.lang:hover{
 	height: 72px;
 	width: 480px;
 	height: 42px;
-	padding-left: 320px;
-	padding-top: 20px;
+	padding-left: 300px;
+	padding-top: 30px;
 	float: left;
 	/*overflow : hidden;*/
 }
