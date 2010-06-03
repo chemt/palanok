@@ -63,9 +63,10 @@
 #nomeri a#prev ,
 #nomeri a#next { font-family: Impact; font-size: 32px; font-weight: bold; text-decoration: none; line-height: 15px;}
 
+
 #price { padding-bottom: 10px; }
 #price strong{ float: right; padding-right: 13px; } 
-
+#price blockquote{border:2px solid  #9e6737; margin: 0px; padding: 5px; }
 #akcii { border:2px solid  #9e6737;}
 
 
@@ -76,5 +77,7 @@
 	text-align: center;
 	display:block;
 	clear: both;
+	text-decoration: none;
 }
 .nomeri img {padding-right: 20px;}
+.nomeri p {padding-right:20px;}

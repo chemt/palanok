@@ -9,7 +9,7 @@
 					Cufon.replace(".nomeri>a", {fontFamily: "mukachev"});
 					
 					// Gallery images with thumbnails
-					$(".nomeri .photo-gallery > ul").PikaChoose({delay_caption:false, 
+					$(".photo-gallery > ul").PikaChoose({delay_caption:false, 
 							auto_play: true,
 							thumb_width: 90,
 							thumb_height: 98,
@@ -17,9 +17,11 @@
 							show_prev_next: false,
 							slide_speed: 10000
 						});
-
-				}
-			);
+					$(".nomeri > a").each(function(index) {
+							url = $(this).attr("href");
+							$(this).next('div').children('a').attr("href", url);
+  						});
+			});
 		</script>
 
 		
@@ -27,7 +29,7 @@
 
 				{% block content %}
 					<div id="top" class="full">
-					<div class="nomeri">
+					<div class="nomeri single">
 							{% placeholder top %}
 					</div> 
 					</div> 

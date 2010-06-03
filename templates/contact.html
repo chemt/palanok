@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block header %}
+{{ block.super }}
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript">
+		  function initialize() {
+		    var latlng = new google.maps.LatLng(48.434767, 22.687207);
+		    var myOptions = {
+		      zoom: 9,
+		      center: latlng,
+		      mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+		    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+		    var marker = new google.maps.Marker({
+		        position: latlng, 
+		        map: map,
+		        title:"Hotel Palanok in Mukachevo."
+    		});  
+		  }
+		</script>
+		
+
+		<script language="javascript">
+			$(document).ready(
+				function (){
+					// Gallery images with thumbnails
+					$(".photo-gallery > ul").PikaChoose({delay_caption:false, 
+							auto_play: false,
+							thumb_width: 90,
+							thumb_height: 98,
+							show_captions: false,
+							show_prev_next: false,
+							slide_speed: 10000
+						});
+					// Google Maps					
+					initialize();
+				}
+			);
+		</script>
+		<style type="text/css">
+			#map_canvas {padding: 3px; border: 2px solid #9e6737;}
+		</style>
+
+{% endblock header %}
+
+				{% block content %}
+					<div id="top" class="full">
+						<div class="single" id="contact">
+								{% placeholder top %}
+						</div> 
+						<div id="map_canvas" style="width: 600px; height: 400px; margin: 30px auto; position: relative; background-color: rgb(229, 227, 223); ">
+						</div> 
+					</div> 
+				{% endblock %}

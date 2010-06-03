@@ -77,5 +77,22 @@ img{
 p{
 	margin : 3px 0 3px 0;
 	padding : 0;
-	text-align : justify;
+	text-align : auto;
+}
+
+/* CLEARING FLOATS */
+div.clear,
+img.clear,
+span.clear,
+ul li.clear{
+	clear : both;
+	display : block!important;
+	float : none!important;
+	font-size : 0!important;
+	height : 0!important;
+	line-height : 0!important;
+	margin : 0!important;
+	padding : 0!important;
+	visibility : hidden;
+	overflow : hidden;
 }

@@ -18,7 +18,7 @@ MANAGERS = ADMINS
 
 
 DATABASE_ENGINE = 'sqlite3'     #postgresql_psycopg2'       # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'cms.db'           # Or path to database file if using sqlite3.
+DATABASE_NAME = '/webhomes/pokutnik/proj/palanok/cms.db'           # Or path to database file if using sqlite3.
 DATABASE_USER = ''           # Not used with sqlite3.
 DATABASE_PASSWORD = ''       # Not used with sqlite3.
 DATABASE_HOST = ''     # Set to empty string for localhost. Not used with sqlite3.
@@ -42,7 +42,8 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 #ADMIN_MEDIA_ROOT = os.path.join(PROJECT_DIR, '../admin_media/')
 MEDIA_URL = '/media/'
 
-ADMIN_MEDIA_PREFIX = '/media/admin/'
+#ADMIN_MEDIA_PREFIX = '/media/admin/'
+ADMIN_MEDIA_PREFIX = 'http://staticfling.net/_django/admin_media_102/'
 
 FIXTURE_DIRS = [os.path.join(PROJECT_DIR, 'fixtures')]
 
@@ -108,11 +109,11 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     'cms.plugins.picture',
     'cms.plugins.file',
-    'cms.plugins.flash',
+    #'cms.plugins.flash',
     'cms.plugins.link',
     'cms.plugins.snippet',
-    'cms.plugins.googlemap',
-    'cms.plugins.teaser',
+    #'cms.plugins.googlemap',
+    #'cms.plugins.teaser',
     #'cms.plugins.video',
 
     'mptt',
@@ -143,20 +144,20 @@ LANGUAGES = (
 
 CMS_LANGUAGE_FALLBACK = True
 CMS_LANGUAGE_CONF = {
-    'de':['en'],
+    'en':['ru', 'ua'],
     'ru':['uk', 'en'],
     'uk':['ru', 'en'],
-    'hu':['en'],
+    'hu':['en', 'ru', 'ua'],
 }
 
 APPEND_SLASH = True
 
 CMS_TEMPLATES = (
+    ('main.htm', gettext(u'Главная страница')),
     ('2col-left.html',  gettext(u'с левой колонкой')),
     ('2col-right.html', gettext(u'с правой колонкой')),
-    ('main.htm', gettext(u'Главная страница')),
     ('nomers_list.html', gettext(u'Страница с номерами')),
-    
+    ('contact.html', gettext(u'Страница контакты')),
 )
 
 CMS_APPLICATIONS_URLS = (
