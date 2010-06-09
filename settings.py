@@ -4,7 +4,7 @@ import os
 PROJECT_DIR = os.path.dirname(__file__)
 PROJECT_NAME = 'palanok'
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -117,7 +117,7 @@ INSTALLED_APPS = (
     #'cms.plugins.video',
 
     'mptt',
-    'reversion',
+    #'reversion',
     'django_extensions',
     #'debug_toolbar',
     'south',
