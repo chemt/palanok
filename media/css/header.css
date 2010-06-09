@@ -82,6 +82,16 @@ a.lang:hover{ font-weight: bolder; }
 	padding-left: 8px;
 	/*background : url(/media/img/menu-left.png) no-repeat top left;*/
 }
+
+#menu ul li+li{
+	float: left;
+	height : 42px;
+	overflow : hidden;
+	padding-left: 10px;
+	margin-left: 3px;
+	background : url(/media/img/bullet.png) no-repeat 0px 15px;
+}
+
 #menu ul li a{
 	height : 42px;
 	/*background : url(/media/img/menu-right.png) no-repeat top right;*/
