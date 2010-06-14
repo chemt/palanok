@@ -180,6 +180,8 @@ CMS_PLACEHOLDER_CONF = {
         "name":gettext(u"Блок Колонка")
     },
     
+    'banners':{"extra_context": {"width":780}, "name":gettext(u"Блок Баннеры")},
+    
     'nomeri':{"extra_context": {"width":200}, "name":gettext(u"Блок Номера")},
     'price':{"extra_context": {"width":200}, "name":gettext(u"Блок Цены")},
     'akcii':{"extra_context": {"width":200}, "name":gettext(u"Блок Акции")},
