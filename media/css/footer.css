@@ -46,19 +46,17 @@
 	overflow : hidden;
 	white-space : nowrap;
 }
-#oxylus{
-	width: 99px;
-	height : 15px;
+
+#footer #banners{
+	bottom: 60px;
+	left: 60px;
+	height: 90px;
+	width: 870px;	
 	overflow : hidden;
-	text-indent : -9999px;
-/*	background : url(/media/img/sona.jpg) no-repeat 0 0;*/
-	position : absolute;
-	top: 19px;
-	right : 105px;
+	position: absolute;
+	font-size: 11px;
 }
-#oxylus:hover{
-	background-position : 0 -15px;
-}
+
 #footer-logo{
 	width: 104px;
 	height : 40px;

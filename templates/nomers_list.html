@@ -6,7 +6,9 @@
 		<script language="javascript">
 			$(document).ready(
 				function (){
-					Cufon.replace(".nomeri>a", {fontFamily: "mukachev"});
+					if ('{{ lang }}' != 'hu'){
+						Cufon.replace(".nomeri>a", {fontFamily: "mukachev"});
+					}
 					
 					// Gallery images with thumbnails
 					$(".photo-gallery > ul").PikaChoose({delay_caption:false, 

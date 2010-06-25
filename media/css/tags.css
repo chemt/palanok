@@ -96,3 +96,17 @@ ul li.clear{
 	visibility : hidden;
 	overflow : hidden;
 }
+
+/*  Hungarian fixes */
+
+body.hu #menu ul>li>a {
+	font-size: 25px !important;
+}
+
+body.hu .nomeri>a{
+	font-size: 30px !important;
+}
+
+body.hu h1 {font-size: 26px !important; font-family: Georgia;}
+body.hu h2 {font-size: 16px !important; font-family: Georgia;}
+

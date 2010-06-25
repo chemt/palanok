@@ -7,6 +7,7 @@
 	<meta name="keywords" content="{% page_attribute meta_keywords %}"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="{{ MEDIA_URL }}css/main.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="{{ MEDIA_URL }}favicon.png" />
 	{% block header %}
 		<link type="text/css" href="{{ MEDIA_URL }}css/pica.css" rel="stylesheet" />
 		
@@ -18,15 +19,17 @@
 		<script language="javascript">
 			$(document).ready(
 				function (){
-					Cufon.replace("#menu ul>li>a", {fontFamily: "mukachev"});
-					Cufon.replace("h1, h2", {fontFamily: "mukachev"});
+					if ('{{ lang }}' != 'hu'){
+						Cufon.replace("#menu ul>li>a", {fontFamily: "mukachev"});
+						Cufon.replace("h1, h2", {fontFamily: "mukachev"});
+					}
 				}
 			);
 		</script>
 
 	{% endblock header %}
 </head>
-<body>
+<body class="{{ lang }}">
 
 <div id="wrapper">
 	<div id="header">
@@ -74,7 +77,6 @@
 		</div>
 
 		<div id="copyright">Copyright &copy; Готель Паланок. Розробка сайту <a id="sona" href="http://www.sona-studio.org.ua/" title="Sona web-Studio">Sona web-Studio</a></div>
-		<hr/>
 		<div id="banners">
 			{% placeholder banners %}
 		</div>
