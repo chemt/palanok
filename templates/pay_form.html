@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load i18n cms_tags %}
+
+{% block title %}{{ platej.title }}{% endblock %}
+
+{% block content %}
+				<div id="top" class="full">
+					<div class="payment">
+						<h1>{% trans 'Оплата пластиковой картой' %}</h1>
+						<h3>{% trans 'Платеж' %} {{ platej.title }} </h3>
+						<p><b>{% trans 'Стоимость платежа' %}: {{ platej.amount }} {% trans 'грн' %} </b></p>
+						<p>{% trans 'Валютный еквивалент' %}: {{ platej.amount2 }} {{ platej.get_PurchaseCurrency2_display }} <em>(значение может менятся в зависимости от курса и тарифов банка емитента карты)</em></p>
+						
+						<hr />
+						
+						{% blocktrans %}
+						<p>Заполните поля ниже для подтверждения платежа.</p>
+						<p>Посля нажатия кнопки <strong>Оплатить</strong> вы будете направлены на страницу оплаты.</p>
+						<p><em>Помощь в оплате карточкй можно получить связавшись с администрацией отеля в разделе <a href="/ru/kontakty/">Контакты</a>.</em></p>
+						{% endblocktrans %}
+						
+						<form action="." method="post">
+							{{ form.as_p }}
+							<input type="submit" value="{% trans 'Оплатить' %}" />
+						</form>
+					</div> 
+				</div> 
+{% endblock %}

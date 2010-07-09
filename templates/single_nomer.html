@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block header %}
+{{ block.super }}
+		<script language="javascript">
+			$(document).ready(
+				function (){
+					// Gallery images with thumbnails
+					$(".photo-gallery > ul").PikaChoose({delay_caption:false, 
+							auto_play: true,
+							thumb_width: 90,
+							thumb_height: 98,
+							show_captions: false,
+							show_prev_next: false,
+							slide_speed: 10000
+						});
+			});
+		</script>
+
+		
+{% endblock header %}
+
+				{% block content %}
+					<div id="top" class="full">
+					<div class="single">
+							{% placeholder top %}
+					</div> 
+					</div> 
+				{% endblock %}

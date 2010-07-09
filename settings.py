@@ -81,7 +81,6 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.multilingual.MultilingualURLMiddleware',
     #'cms.middleware.toolbar.ToolbarMiddleware',
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
-    
 )
 
 ROOT_URLCONF = PROJECT_NAME + '.urls'
@@ -125,6 +124,7 @@ INSTALLED_APPS = (
 	
     'photologue',
     'cmsplugin_photologue',
+    'private',
 
     # sample application
     #'test_utils',
@@ -152,11 +152,13 @@ CMS_LANGUAGE_CONF = {
 
 APPEND_SLASH = True
 
+
 CMS_TEMPLATES = (
     ('main.htm', gettext(u'Главная страница')),
     ('2col-left.html',  gettext(u'с левой колонкой')),
     ('2col-right.html', gettext(u'с правой колонкой')),
-    ('nomers_list.html', gettext(u'Страница с номерами')),
+    ('nomers_list.html', gettext(u'Список номеров')),
+    ('single_nomer.html', gettext(u'Один номер')),
     ('contact.html', gettext(u'Страница контакты')),
 )
 
@@ -175,16 +177,13 @@ CMS_PLACEHOLDER_CONF = {
         "name":gettext(u"Блок Верхний"),
     },
     
-    'side-column': {
-        "extra_context": {"width":250},
-        "name":gettext(u"Блок Колонка")
-    },
+    'side-column': {"extra_context": {"width":250}, "name":gettext(u"Блок Колонка")},
     
     'banners':{"extra_context": {"width":780}, "name":gettext(u"Блок Баннеры")},
     
-    'nomeri':{"extra_context": {"width":200}, "name":gettext(u"Блок Номера")},
-    'price':{"extra_context": {"width":200}, "name":gettext(u"Блок Цены")},
-    'akcii':{"extra_context": {"width":200}, "name":gettext(u"Блок Акции")},
+    'nomeri' :{"extra_context": {"width":200}, "name":gettext(u"Блок Номера")},
+    'price'  :{"extra_context": {"width":200}, "name":gettext(u"Блок Цены")},
+    'akcii'  :{"extra_context": {"width":200}, "name":gettext(u"Блок Акции")},
     'gallery':{"extra_context": {"width":200}, "name":gettext(u"Блок Галерея")},
 
     'info1':{"extra_context": {"width":200}, "name":gettext(u"info1")},

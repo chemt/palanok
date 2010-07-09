@@ -20,11 +20,11 @@ if settings.DEBUG:
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True})
     )
 
+
 urlpatterns += patterns('',
+    url(r'^', include('private.urls')),
+    
+    url(r'^', include('photologue.urls')),
     url(r'^', include('cms.urls')),
 )
 
-#import photologue urls
-urlpatterns += patterns('',
-    url(r'^', include('photologue.urls')),
-)

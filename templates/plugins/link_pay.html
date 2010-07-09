@@ -1,0 +1,6 @@
+<span class="pay"> {% if object.ancor %}<a rel="nofollow" href="{{ object.platej.get_absolute_url }}">{% endif %}
+{{ object.user_text|safe }}
+{% if object.display_uah %} <span class="price"> {{ object.platej.amount }} </span> <span class="currency">UAH</span> {% endif %}
+{% if object.display_alt %}	<span class="price alt"> {{ object.platej.amount2 }} </span> <span class="currency">{{ object.platej.get_PurchaseCurrency2_display }}</span> {% endif %}
+{% if object.ancor %}</a>{% endif %}
+</span>
