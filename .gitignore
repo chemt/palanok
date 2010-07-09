@@ -4,6 +4,7 @@
 *.pid
 *.DS_Store
 *.svn
+merchant.py
 media/photologue/photos/
 reversion/
 build

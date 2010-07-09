@@ -1,0 +1,100 @@
+# -*- coding: utf-8 -*-
+from django.db import models
+
+class Order(models.Model):
+    title = models.CharField(_(u"Название счета"), max_length=200)
+    datetime = models.DateField(_(u"Дата создания заказа"), auto_now=True) 
+
+    OrderID = models.CharField(_(u"OrderID"), max_length=200)
+    
+    STATUS_CHOISES = (
+        ('open',  u'Счет выставлен, не оплачен'),
+        ('ok',    u'Одобрено'),
+        ('refused', u'Отклонено'),
+        ('error',   u'Ошибка системы'),
+        ('errorproc',   u'Ошибка обработки'),
+    )
+    status = models.CharField(_(u"Статус счета"), max_length=10, choises=STATUS_CHOISES, default='open')
+    
+    amount  = models.IntegerField(_(u"Цена в гривнах")) 
+    amount2 = models.IntegerField(_(u"Цена в валютном эквиваленте"))
+    
+    CURRENCY_CHOISES = ( 
+        ('978', u'EUR (978) - Евро'),
+        ('840', u'USD (840) - Доллар'),
+        ('348', u'HUF (348) - Форинт'),
+        ('980', u'UAH (980) — Гривна'),
+    )
+    PurchaseCurrency2 = models.CharField(_(u"Альтернативная валюта"), max_length=3, choices=CURRENCY_CHOISES) 
+    
+    OrderSignature = models.CharField(_(u"OrderSignature SHA-1"), max_length=200)
+    AdditionalData = models.CharField(_(u"Дополнительные параметры"), max_length=200)
+    
+    IP = models.CharField(_(u"IP"), max_length=200)
+    
+    class Meta:
+        ordering = ["-datetime", "OrderID"]
+        verbose_name = _(u"Счет на оплату")
+        verbose_name_plural = _(u"Счеты на оплату")
+        
+    class Admin(admin.ModelAdmin):
+        list_display  = ('datetime', 'title', 'status', 'OrderID', 'amount', 'amount2', 'PurchaseCurrency2', 'OrderSignature')
+        search_fields = ('OrderID', 'title')
+        list_filter   = ('status', 'PurchaseCurrency2')
+
+        date_hierarchy = 'datetime'
+        readonly_fields = ('datetime',)
+        
+        fieldsets = (
+            (None,         {'fields': ('title', 'datetime', 'status', 'OrderID') } ),
+            (_(u"Ціна"),   {'fields': ('amount', ('amount2', 'PurchaseCurrency2') ) } ),
+            
+            (_(u"Додатково"),         
+                {
+                    'fields': ('OrderSignature', 'AdditionalData', 'IP') , 
+                    'classes': ('collapse',),
+                }
+            ),
+        )
+
+    def __unicode__(self):
+        return u"%s" % self.name
+    
+
+class PaymentResponce(models.Model):
+    datetime = models.DateField(_(u"Дата Получения ответа"), auto_now=True)
+    order = models.ForeignKey(Order)
+    error = models.CharField(max_length=510, default='')
+
+    AcqID      = models.CharField(max_length=200)
+    MerID      = models.CharField(max_length=200)
+    OrderID    = models.CharField(max_length=200)
+    Signature  = models.CharField(max_length=200)
+    ECI        = models.CharField(max_length=200)
+    IP         = models.CharField(max_length=200)
+    CountryBIN = models.CharField(max_length=200)
+    CountryIP  = models.CharField(max_length=200)
+    ONUS       = models.CharField(max_length=200)
+    Time       = models.CharField(max_length=200)
+    Signature2 = models.CharField(max_length=200)
+    ResponseCode   = models.CharField(max_length=200)
+    ReasonCode     = models.CharField(max_length=200)
+    ReasonCodeDesc = models.CharField(max_length=200)
+    ReferenceNo    = models.CharField(max_length=200)
+    PaddedCardNo   = models.CharField(max_length=200)
+    AuthCode       = models.CharField(max_length=200)
+
+
+    class Meta:
+        ordering = ["datetime", "OrderID"]
+        verbose_name = _(u"Результат оплаты")
+        verbose_name_plural = _(u"Результаты оплаты")
+        
+    class Admin(admin.ModelAdmin):
+        date_hierarchy = 'datetime'
+        list_display  = ('datetime', 'OrderID', 'ECI', 'IP', 'Time', 'ResponseCode', 'ReasonCodeDesc', 'error')
+        search_fields = ('OrderID')
+        list_filter   = ('datetime', 'ResponseCode', 'CountryBIN')
+
+    def __unicode__(self):
+        return u"%s" % self.OrderID
