@@ -23,6 +23,7 @@ def create_order(request, email, tel, name, amount, amount2, PurchaseCurrency2):
 
 
     Signature = merchant.Password + merchant.MerID + merchant.AcqID + OrderID + PurchaseAmt + PurchaseCurrency + PurchaseAmt2 + PurchaseCurrency2 + AdditionalData
+    Signature = b64encode(sha.new(Signature).digest())
     
     order = Order(
         email=email,
@@ -45,7 +46,7 @@ def create_order(request, email, tel, name, amount, amount2, PurchaseCurrency2):
 
     
     
-    Signature = b64encode(sha.new(Signature).digest())
+    
     SignatureMethod = 'SHA1'
     form = """
     <body>
