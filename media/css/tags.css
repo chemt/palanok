@@ -110,3 +110,8 @@ body.hu .nomeri>a{
 body.hu h1 {font-size: 26px !important; font-family: Georgia;}
 body.hu h2 {font-size: 16px !important; font-family: Georgia;}
 
+HR { margin: 1em auto; text-align: right; height: 2px; color: #7f5026; background-color: #7f5026; border: none; } /* Для IE */
+HTML>BODY HR { margin: 1em auto; height: 2px; background-color: #7f5026; border: none; } /* Для броузеров на базе Gecko */
+
+
+

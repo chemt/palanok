@@ -29,7 +29,7 @@ DATABASE_PORT = ''              # Set to empty string for default. Not used with
 # although not all choices may be avilable on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Ukraine/Kyiv'
 
 SITE_ID = 1
 
@@ -42,8 +42,9 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 #ADMIN_MEDIA_ROOT = os.path.join(PROJECT_DIR, '../admin_media/')
 MEDIA_URL = '/media/'
 
-#ADMIN_MEDIA_PREFIX = '/media/admin/'
-ADMIN_MEDIA_PREFIX = 'http://staticfling.net/_django/admin_media_102/'
+#ADMIN_MEDIA_PREFIX = '/admin-media/'
+ADMIN_MEDIA_PREFIX = 'http://staticfling.net/_django/admin_media_111/'
+
 
 FIXTURE_DIRS = [os.path.join(PROJECT_DIR, 'fixtures')]
 

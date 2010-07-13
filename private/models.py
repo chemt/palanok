@@ -20,22 +20,13 @@ class Order(models.Model):
     datetime = models.DateTimeField(_(u"Дата создания счета"), auto_now=True) 
 
     OrderID = models.CharField(_(u"OrderID"), max_length=200)
+
+    amount  = models.PositiveIntegerField(_(u"Цена грн"), help_text=_(u"Цена в гривнах")) 
+    amount2 = models.PositiveIntegerField(_(u"Цена2"), help_text=_(u"Цена в валютном эквиваленте"))
     
-#    STATUS_CHOICES = (
-#        ('open',  u'Счет выставлен, не оплачен'),
-#        ('ok',    u'Одобрено'),
-#        ('refused', u'Отклонено'),
-#        ('error',   u'Ошибка системы'),
-#        ('errorproc',   u'Ошибка обработки'),
-#    )
-#    status = models.CharField(_(u"Статус счета"), max_length=10, choices=STATUS_CHOICES, default='open')
+    PurchaseCurrency2 = models.CharField(_(u"Валюта"), help_text=_(u"Альтернативная валюта"), max_length=3, choices=CURRENCY_CHOICES) 
     
-    amount  = models.PositiveIntegerField(_(u"Цена в гривнах")) 
-    amount2 = models.PositiveIntegerField(_(u"Цена в валютном эквиваленте"))
-    
-    PurchaseCurrency2 = models.CharField(_(u"Альтернативная валюта"), max_length=3, choices=CURRENCY_CHOICES) 
-    
-    OrderSignature = models.CharField(_(u"OrderSignature SHA-1"), max_length=200)
+    OrderSignature = models.CharField(_(u"SHA-1"), max_length=200)
     AdditionalData = models.CharField(_(u"Дополнительные параметры"), max_length=200)
     
     IP = models.CharField(_(u"IP"), max_length=200)
@@ -46,8 +37,8 @@ class Order(models.Model):
         verbose_name_plural = _(u"Счеты на оплату")
         
     class Admin(admin.ModelAdmin):
-        list_display  = ('datetime', 'title', 'OrderID', 'amount', 'amount2', 'PurchaseCurrency2', 'OrderSignature')
-        search_fields = ('OrderID', 'title')
+        list_display  = ('datetime', 'name', 'email', 'tel', 'OrderID', 'amount', 'amount2', 'PurchaseCurrency2')
+        search_fields = ('OrderID', 'title', 'name', 'email', 'tel',)
         list_filter   = ('PurchaseCurrency2',)
 
         date_hierarchy = 'datetime'
@@ -70,9 +61,11 @@ class Order(models.Model):
 
 class Platej(models.Model):
     title = models.CharField(_(u"Название платежа"), max_length=200)
-    amount  = models.PositiveIntegerField(_(u"Цена в гривнах")) 
-    amount2 = models.PositiveIntegerField(_(u"Цена в валютном эквиваленте"))
-    PurchaseCurrency2 = models.CharField(_(u"Альтернативная валюта"), max_length=3, choices=CURRENCY_CHOICES) 
+    amount  = models.PositiveIntegerField(_(u"Цена грн"), help_text=_(u"Цена в гривнах")) 
+    amount2 = models.PositiveIntegerField(_(u"Цена2"), help_text=_(u"Цена в валютном эквиваленте"))
+    
+    PurchaseCurrency2 = models.CharField(_(u"Валюта"), help_text=_(u"Альтернативная валюта"), max_length=3, choices=CURRENCY_CHOICES) 
+
     
     class Meta:
         verbose_name = _(u"Платеж")
@@ -104,7 +97,11 @@ class PlatejPlugin(CMSPlugin):
         verbose_name_plural = _(u"Ссылки на платежи")    
 
     def __unicode__(self):
+        str = unicode(self.user_text)[:10] + r'/'
         if self.display_uah:
-            return u'%dгрн-%s' %(self.platej.amount, self.platej.title)
-        return u'%s-%d' % (self.platej.title, self.platej.amount)
+            str += u'%dгрн/' % self.platej.amount
+        if self.display_alt:
+            str += '(%d)/' % self.platej.amount2
+        str += self.platej.title
+        return str
         
