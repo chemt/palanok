@@ -58,7 +58,7 @@
 
 #left-col ul li img {	border: #9e6737 solid 2px;}
 
-.info-block{ border: #9e6737 solid 2px; vertical-align: top;}
+.info-block{ border: #9e6737 solid 2px; vertical-align: top; padding: 0.5em;}
 
 #nomeri a#prev ,
 #nomeri a#next { font-family: Impact; font-size: 32px; font-weight: bold; text-decoration: none; line-height: 15px;}
