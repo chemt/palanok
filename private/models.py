@@ -72,7 +72,7 @@ class Platej(models.Model):
         verbose_name_plural = _(u"Платежи")
         
     class Admin(admin.ModelAdmin):
-        list_filter   = ('PurchaseCurrency2', )
+        pass
 
     def __unicode__(self):
         return u"%s - %d" % (self.title, self.amount)

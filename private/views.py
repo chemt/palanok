@@ -18,7 +18,7 @@ def create_order(request, email, tel, name, amount, amount2, PurchaseCurrency2):
     PurchaseAmt2      = dig12(amount2 * 100) 
     PurchaseCurrencyExponent = '2'
     time = datetime.datetime.now().isoformat()
-    OrderID = 'Test_Merchant_Name_Palanok_' + time
+    OrderID = 'Palanok_' + time
     AdditionalData = ''
 
 
