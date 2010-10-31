@@ -107,7 +107,7 @@ jQuery.iPikaChoose = {
 				//bring in options
 				var options = jQuery.extend(defaults, user_options);
 				// grab our images
-				var images = jQuery(this).children('li').children('img');
+				var images = jQuery("li img", this);
 				//hide the images so the user doesn't see crap
 				images.fadeOut(1);
 				

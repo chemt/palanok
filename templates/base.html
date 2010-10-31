@@ -11,11 +11,18 @@
 	{% block header %}
 		<link type="text/css" href="{{ MEDIA_URL }}css/pica.css" rel="stylesheet" />
 		
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-		<script type="text/javascript" src="{{ MEDIA_URL }}js/cufon-yui.js"></script>
-		<script type="text/javascript" src="{{ MEDIA_URL }}js/mukachev_400.font.js"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
 		<script type="text/javascript" src="{{ MEDIA_URL }}js/pikachoose-min.js"></script>
 		<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.2.72.js"></script>
+
+{% block extra_header %}
+{% endblock extra_header %}
+		
+
+		<script type="text/javascript" src="{{ MEDIA_URL }}js/cufon-yui.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}js/mukachev_400.font.js"></script> 
+
 		<script language="javascript">
 			$(document).ready(
 				function (){
@@ -82,7 +89,6 @@
 		<div id="footer-menu">
 			<ul>{% show_menu 0 100 100 100 %}</ul>
 		</div>
-
 		<div id="copyright">Copyright &copy; Готель Паланок. Розробка сайту <a id="sona" href="http://www.sona-studio.org.ua/" title="Sona web-Studio">Sona web-Studio</a></div>
 		<div id="banners">
 			{% placeholder banners %}
@@ -91,7 +97,7 @@
 	<!-- e:FOOTER -->
 </div>
 <!-- e:WRAPPER -->
-
+<!--		<script language="javascript">var i = 0;</script> -->
 <!-- google -->
 <script type="text/javascript"> 
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -111,6 +117,7 @@ pageTracker._trackPageview();
 try { var yaCounter1125505 = new Ya.Metrika(1125505); } catch(e){}
 </script></div>
 <noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1125505" alt="" /></div></noscript>
+
 <!-- /Yandex.Metrika -->
 
 </body>

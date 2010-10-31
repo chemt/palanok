@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 
+
 {% block header %}
 {{ block.super }}
 		<script language="javascript">
-				$(document).ready(
+			$(document).ready(
 				function (){
+					if ($.browser.mozilla){
+						var ems = $("em > em > *");
+						ems.unwrap().unwrap();
+					}
 					// Gallery images with thumbnails
 					$("#body-col .photo-gallery > ul").PikaChoose({delay_caption:false, 
 							auto_play: true,
@@ -15,7 +20,7 @@
 							show_prev_next: false,
 							slide_speed: 10000
 						});
-					
+
 					// imagebox
 					$("#left-col #nomeri .photo-gallery ul")
 					.after('<a id="prev" href="#"> &larr;</a><a id="next" class="right" href="#"> &rarr;</a>')
@@ -27,9 +32,13 @@
 							next: '#nomeri #next, #nomeri img', 
     						prev: '#nomeri #prev'  
 						});
-				});
+					
+			});
 		</script>
+
+		
 {% endblock header %}
+
 
 				{% block content %}
 				<div class="main full">
